@@ -1,14 +1,0 @@
-🔧 Logging to: ./logs\log_20250415_230001.txt
-
-📥 Fetching EDHREC Data:   0%|[36m                                                                  [0m| 0/27 [00:00<?, ?it/s][0m📥 Fetching EDHREC Data:   0%|[36m                                                                  [0m| 0/27 [00:00<?, ?it/s][0m
-Traceback (most recent call last):
-  File "C:\Scripts\mtg\main.py", line 279, in <module>
-    edhrec_main(sys.argv[1])
-    ~~~~~~~~~~~^^^^^^^^^^^^^
-  File "C:\Scripts\mtg\main.py", line 117, in edhrec_main
-    data, formatted = fetch_synergy_data(card_name)
-                      ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
-  File "C:\Scripts\mtg\main.py", line 65, in fetch_synergy_data
-    if datetime.now() - file_time < timedelta(weeks=1):
-                                    ^^^^^^^^^
-NameError: name 'timedelta' is not defined

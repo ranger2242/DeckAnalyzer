@@ -1,85 +1,0 @@
-🔧 Logging to: ./logs\log_20250416_010008.txt
-
-📥 Fetching EDHREC Data:   0%|[36m                                                                  [0m| 0/84 [00:00<?, ?it/s][0m⏩ Using cached EDHREC data for 'kokusho the evening star'
-⏩ Using cached EDHREC data for 'tiamat'
-⏩ Using cached EDHREC data for 'Atsushi, the Blazing Sky'
-⏩ Using cached EDHREC data for 'kairi the swirling sky'
-⏩ Using cached EDHREC data for 'ryusei the falling star'
-⏩ Using cached EDHREC data for 'colossal grave-reaver'
-⏩ Using cached EDHREC data for 'keiga the tide star'
-⏩ Using cached EDHREC data for 'jugan the rising star'
-⏩ Using cached EDHREC data for 'junji the midnight sky'
-⏩ Using cached EDHREC data for 'ancient brass dragon'
-⏩ Using cached EDHREC data for 'teval the balanced scale'
-⏩ Using cached EDHREC data for 'kura the boundless sky'
-⏩ Using cached EDHREC data for 'kyodai soul of kamigawa'
-⏩ Using cached EDHREC data for 'ao the dawn sky'
-[32m✅ Saved: ./edhrec-card-data/rivaz-of-the-claw_synergy.csv
-📥 Fetching EDHREC Data:  18%|[36m##########1                                              [0m| 15/84 [00:00<00:01, 47.55it/s][0m⏩ Using cached EDHREC data for 'yosei the morning star'
-⏩ Using cached EDHREC data for 'ebondeath dracolich'
-⏩ Using cached EDHREC data for 'miirym sentinel wyrm'
-⏩ Using cached EDHREC data for 'scion of the ur-dragon'
-⏩ Using cached EDHREC data for 'zimone and dina'
-⚠️  Failed to fetch data for '-Teysa Karlov'
-📥 Fetching EDHREC Data:  25%|[36m##############2                                          [0m| 21/84 [00:00<00:01, 37.54it/s][0m⚠️  Failed to fetch data for '-Eshki, Temur's Roar'
-⚠️  Failed to fetch data for '-Thalia and The Gitrog Monster'
-⚠️  Failed to fetch data for '-The Jolly Balloon Man'
-[32m✅ Saved: ./edhrec-card-data/muldrotha-the-gravetide_synergy.csv
-📥 Fetching EDHREC Data:  30%|[36m################9                                        [0m| 25/84 [00:01<00:04, 14.61it/s][0m[32m✅ Saved: ./edhrec-card-data/lathliss-dragon-queen_synergy.csv
-[32m✅ Saved: ./edhrec-card-data/kaalia-of-the-vast_synergy.csv
-⏩ Using cached EDHREC data for 'Teval, the Balanced Scale'
-📥 Fetching EDHREC Data:  33%|[36m###################                                      [0m| 28/84 [00:01<00:05, 10.65it/s][0m⚠️  Failed to fetch data for '-The Ever-Changing 'Dane'
-[32m✅ Saved: ./edhrec-card-data/sarkhan-soul-aflame_synergy.csv
-📥 Fetching EDHREC Data:  36%|[36m####################3                                    [0m| 30/84 [00:02<00:07,  7.50it/s][0m[32m✅ Saved: ./edhrec-card-data/o-kagachi-vengeful-kami_synergy.csv
-[32m✅ Saved: ./edhrec-card-data/iname-as-one_synergy.csv
-📥 Fetching EDHREC Data:  38%|[36m#####################7                                   [0m| 32/84 [00:03<00:08,  5.87it/s][0m[32m✅ Saved: ./edhrec-card-data/ziatora-the-incinerator_synergy.csv
-📥 Fetching EDHREC Data:  39%|[36m######################3                                  [0m| 33/84 [00:03<00:09,  5.33it/s][0m[32m✅ Saved: ./edhrec-card-data/millicent-restless-revenant_synergy.csv
-📥 Fetching EDHREC Data:  40%|[36m#######################                                  [0m| 34/84 [00:03<00:11,  4.20it/s][0m[32m✅ Saved: ./edhrec-card-data/ureni-of-the-unwritten_synergy.csv
-📥 Fetching EDHREC Data:  42%|[36m#######################7                                 [0m| 35/84 [00:04<00:12,  4.06it/s][0m⏩ Using cached EDHREC data for 'Sol Ring'
-⏩ Using cached EDHREC data for 'Arcane Signet'
-[32m✅ Saved: ./edhrec-card-data/dragons-hoard_synergy.csv
-📥 Fetching EDHREC Data:  45%|[36m#########################7                               [0m| 38/84 [00:04<00:09,  4.65it/s][0m[32m✅ Saved: ./edhrec-card-data/chromatic-lantern_synergy.csv
-📥 Fetching EDHREC Data:  46%|[36m##########################4                              [0m| 39/84 [00:05<00:10,  4.44it/s][0m[32m✅ Saved: ./edhrec-card-data/urzas-incubator_synergy.csv
-📥 Fetching EDHREC Data:  48%|[36m###########################1                             [0m| 40/84 [00:05<00:10,  4.25it/s][0m[32m✅ Saved: ./edhrec-card-data/conduit-of-worlds_synergy.csv
-📥 Fetching EDHREC Data:  49%|[36m###########################8                             [0m| 41/84 [00:05<00:10,  4.13it/s][0m[32m✅ Saved: ./edhrec-card-data/talisman-of-dominance_synergy.csv
-📥 Fetching EDHREC Data:  50%|[36m############################5                            [0m| 42/84 [00:06<00:12,  3.34it/s][0m⏩ Using cached EDHREC data for 'Skullclamp'
-[32m✅ Saved: ./edhrec-card-data/fellwar-stone_synergy.csv
-📥 Fetching EDHREC Data:  52%|[36m#############################8                           [0m| 44/84 [00:06<00:09,  4.30it/s][0m[32m✅ Saved: ./edhrec-card-data/dragon-tempest_synergy.csv
-📥 Fetching EDHREC Data:  54%|[36m##############################5                          [0m| 45/84 [00:06<00:09,  4.03it/s][0m[32m✅ Saved: ./edhrec-card-data/encroaching-dragonstorm_synergy.csv
-📥 Fetching EDHREC Data:  55%|[36m###############################2                         [0m| 46/84 [00:06<00:10,  3.75it/s][0m[32m✅ Saved: ./edhrec-card-data/call-the-spirit-dragons_synergy.csv
-📥 Fetching EDHREC Data:  56%|[36m###############################8                         [0m| 47/84 [00:07<00:09,  3.77it/s][0m[32m✅ Saved: ./edhrec-card-data/smothering-tithe_synergy.csv
-📥 Fetching EDHREC Data:  57%|[36m################################5                        [0m| 48/84 [00:07<00:09,  3.76it/s][0m[32m✅ Saved: ./edhrec-card-data/temur-ascendancy_synergy.csv
-📥 Fetching EDHREC Data:  58%|[36m#################################2                       [0m| 49/84 [00:08<00:11,  3.02it/s][0m[32m✅ Saved: ./edhrec-card-data/riveteers-ascendancy_synergy.csv
-📥 Fetching EDHREC Data:  60%|[36m#################################9                       [0m| 50/84 [00:08<00:10,  3.14it/s][0m[32m✅ Saved: ./edhrec-card-data/growth-spiral_synergy.csv
-📥 Fetching EDHREC Data:  61%|[36m##################################6                      [0m| 51/84 [00:08<00:09,  3.41it/s][0m[32m✅ Saved: ./edhrec-card-data/generous-gift_synergy.csv
-📥 Fetching EDHREC Data:  62%|[36m###################################2                     [0m| 52/84 [00:08<00:09,  3.55it/s][0m[32m✅ Saved: ./edhrec-card-data/swords-to-plowshares_synergy.csv
-📥 Fetching EDHREC Data:  63%|[36m###################################9                     [0m| 53/84 [00:09<00:08,  3.58it/s][0m[32m✅ Saved: ./edhrec-card-data/path-to-exile_synergy.csv
-📥 Fetching EDHREC Data:  64%|[36m####################################6                    [0m| 54/84 [00:09<00:08,  3.60it/s][0m[32m✅ Saved: ./edhrec-card-data/counterspell_synergy.csv
-📥 Fetching EDHREC Data:  65%|[36m#####################################3                   [0m| 55/84 [00:09<00:07,  3.63it/s][0m[32m✅ Saved: ./edhrec-card-data/assassins-trophy_synergy.csv
-📥 Fetching EDHREC Data:  67%|[36m######################################                   [0m| 56/84 [00:09<00:07,  3.52it/s][0m[32m✅ Saved: ./edhrec-card-data/anguished-unmaking_synergy.csv
-📥 Fetching EDHREC Data:  68%|[36m######################################6                  [0m| 57/84 [00:10<00:07,  3.50it/s][0m[32m✅ Saved: ./edhrec-card-data/crux-of-fate_synergy.csv
-📥 Fetching EDHREC Data:  69%|[36m#######################################3                 [0m| 58/84 [00:10<00:07,  3.37it/s][0m[32m✅ Saved: ./edhrec-card-data/will-of-the-temur_synergy.csv
-📥 Fetching EDHREC Data:  70%|[36m########################################                 [0m| 59/84 [00:10<00:07,  3.56it/s][0m[32m✅ Saved: ./edhrec-card-data/will-of-the-sultai_synergy.csv
-📥 Fetching EDHREC Data:  71%|[36m########################################7                [0m| 60/84 [00:11<00:07,  3.42it/s][0m[32m✅ Saved: ./edhrec-card-data/reanimate_synergy.csv
-📥 Fetching EDHREC Data:  73%|[36m#########################################3               [0m| 61/84 [00:11<00:06,  3.58it/s][0m[32m✅ Saved: ./edhrec-card-data/life-from-the-loam_synergy.csv
-📥 Fetching EDHREC Data:  74%|[36m##########################################               [0m| 62/84 [00:11<00:06,  3.55it/s][0m[32m✅ Saved: ./edhrec-card-data/victimize_synergy.csv
-📥 Fetching EDHREC Data:  75%|[36m##########################################7              [0m| 63/84 [00:11<00:05,  3.67it/s][0m[32m✅ Saved: ./edhrec-card-data/command-tower_synergy.csv
-📥 Fetching EDHREC Data:  76%|[36m###########################################4             [0m| 64/84 [00:12<00:05,  3.66it/s][0m[32m✅ Saved: ./edhrec-card-data/haven-of-the-spirit-dragon_synergy.csv
-📥 Fetching EDHREC Data:  77%|[36m############################################1            [0m| 65/84 [00:12<00:05,  3.57it/s][0m[32m✅ Saved: ./edhrec-card-data/path-of-ancestry_synergy.csv
-📥 Fetching EDHREC Data:  79%|[36m############################################7            [0m| 66/84 [00:12<00:05,  3.59it/s][0m[32m✅ Saved: ./edhrec-card-data/exotic-orchard_synergy.csv
-📥 Fetching EDHREC Data:  80%|[36m#############################################4           [0m| 67/84 [00:12<00:04,  3.63it/s][0m[32m✅ Saved: ./edhrec-card-data/cavern-of-souls_synergy.csv
-📥 Fetching EDHREC Data:  81%|[36m##############################################1          [0m| 68/84 [00:13<00:04,  3.53it/s][0m[32m✅ Saved: ./edhrec-card-data/the-world-tree_synergy.csv
-📥 Fetching EDHREC Data:  82%|[36m##############################################8          [0m| 69/84 [00:13<00:04,  3.58it/s][0m[32m✅ Saved: ./edhrec-card-data/crucible-of-the-spirit-dragon_synergy.csv
-📥 Fetching EDHREC Data:  83%|[36m###############################################5         [0m| 70/84 [00:13<00:03,  3.66it/s][0m[32m✅ Saved: ./edhrec-card-data/temple-of-the-dragon-queen_synergy.csv
-📥 Fetching EDHREC Data:  85%|[36m################################################1        [0m| 71/84 [00:14<00:03,  3.68it/s][0m⏩ Using cached EDHREC data for 'skullclamp'
-⏩ Using cached EDHREC data for 'strionic resonator'
-⏩ Using cached EDHREC data for 'arcane signet'
-⏩ Using cached EDHREC data for 'oversold cemetery'
-⏩ Using cached EDHREC data for 'ketria triome'
-⏩ Using cached EDHREC data for 'fearsome awakening'
-📥 Fetching EDHREC Data: 100%|[36m#########################################################[0m| 84/84 [00:14<00:00,  5.96it/s][0m
-🔀 Combining CSVs:   0%|[35m                                                                        [0m| 0/69 [00:00<?, ?it/s][0m🔀 Combining CSVs:  38%|[35m#######################3                                      [0m| 26/69 [00:00<00:00, 254.11it/s][0m🔀 Combining CSVs:  93%|[35m#########################################################5    [0m| 64/69 [00:00<00:00, 323.29it/s][0m🔀 Combining CSVs: 100%|[35m##############################################################[0m| 69/69 [00:00<00:00, 314.88it/s][0m
-✨ Enriching with Scryfall:   0%|[32m                                                              [0m| 0/589 [00:00<?, ?it/s][0m❌ Failed to fetch: Henzie "Toolbox" Torre
-✨ Enriching with Scryfall:   0%|[32m                                                      [0m| 1/589 [00:00<02:40,  3.65it/s][0m✨ Enriching with Scryfall:   1%|[32m6                                                     [0m| 7/589 [00:00<00:53, 10.90it/s][0m✨ Enriching with Scryfall:   1%|[32m7                                                     [0m| 8/589 [00:01<01:24,  6.87it/s][0m✨ Enriching with Scryfall:   2%|[32m8                                                    [0m| 10/589 [00:01<01:34,  6.10it/s][0m✨ Enriching with Scryfall:   2%|[32m#2                                                   [0m| 14/589 [00:01<01:09,  8.32it/s][0m✨ Enriching with Scryfall:   3%|[32m#5                                                   [0m| 17/589 [00:02<01:23,  6.84it/s][0m✨ Enriching with Scryfall:   3%|[32m#7                                                   [0m| 20/589 [00:02<01:21,  6.96it/s][0m✨ Enriching with Scryfall:   4%|[32m#9                                                   [0m| 22/589 [00:03<01:25,  6.61it/s][0m✨ Enriching with Scryfall:   4%|[32m##                                                   [0m| 23/589 [00:03<01:59,  4.75it/s][0m✨ Enriching with Scryfall:   5%|[32m##6                                                  [0m| 30/589 [00:04<01:17,  7.24it/s][0m✨ Enriching with Scryfall:   6%|[32m###3                                                 [0m| 37/589 [00:04<01:02,  8.85it/s][0m❌ Failed to fetch: Skanos Dragonheart // Acolyte of Bahamut
-✨ Enriching with Scryfall:   6%|[32m###4                                                 [0m| 38/589 [00:05<01:06,  8.29it/s][0m✨ Enriching with Scryfall:   7%|[32m###5                                                 [0m| 39/589 [00:05<01:36,  5.73it/s][0m✨ Enriching with Scryfall:   7%|[32m###5                                                 [0m| 40/589 [00:06<01:47,  5.13it/s][0m✨ Enriching with Scryfall:   9%|[32m####5                                                [0m| 51/589 [00:06<00:50, 10.63it/s][0m✨ Enriching with Scryfall:  10%|[32m#####1                                               [0m| 57/589 [00:06<00:43, 12.14it/s][0m✨ Enriching with Scryfall:  10%|[32m#####4                                               [0m| 61/589 [00:07<00:52, 10.09it/s][0m✨ Enriching with Scryfall:  11%|[32m#####6                                               [0m| 63/589 [00:07<01:01,  8.59it/s][0m❌ Failed to fetch: Frodo, Adventurous Hobbit // Sam, Loyal Attendant
-✨ Enriching with Scryfall:  12%|[32m######1                                              [0m| 68/589 [00:08<00:47, 11.05it/s][0m✨ Enriching with Scryfall:  12%|[32m######2                                              [0m| 70/589 [00:08<00:57,  8.97it/s][0m✨ Enriching with Scryfall:  13%|[32m######9                                              [0m| 77/589 [00:09<00:45, 11.24it/s][0m✨ Enriching with Scryfall:  14%|[32m#######3                                             [0m| 82/589 [00:09<00:40, 12.48it/s][0m
