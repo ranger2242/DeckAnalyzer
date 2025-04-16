@@ -1,0 +1,135 @@
+{
+  "object": "card",
+  "id": "fe2d08ac-6c24-4158-87a1-c59d1cd447a8",
+  "oracle_id": "2ceac1be-32ab-4a04-ade3-852926a5ca45",
+  "multiverse_ids": [
+    563163
+  ],
+  "mtgo_id": 100598,
+  "tcgplayer_id": 272701,
+  "cardmarket_id": 659058,
+  "name": "Korlessa, Scale Singer",
+  "lang": "en",
+  "released_at": "2022-06-10",
+  "uri": "https://api.scryfall.com/cards/fe2d08ac-6c24-4158-87a1-c59d1cd447a8",
+  "scryfall_uri": "https://scryfall.com/card/clb/280/korlessa-scale-singer?utm_source=api",
+  "layout": "normal",
+  "highres_image": true,
+  "image_status": "highres_scan",
+  "image_uris": {
+    "small": "https://cards.scryfall.io/small/front/f/e/fe2d08ac-6c24-4158-87a1-c59d1cd447a8.jpg?1674137554",
+    "normal": "https://cards.scryfall.io/normal/front/f/e/fe2d08ac-6c24-4158-87a1-c59d1cd447a8.jpg?1674137554",
+    "large": "https://cards.scryfall.io/large/front/f/e/fe2d08ac-6c24-4158-87a1-c59d1cd447a8.jpg?1674137554",
+    "png": "https://cards.scryfall.io/png/front/f/e/fe2d08ac-6c24-4158-87a1-c59d1cd447a8.png?1674137554",
+    "art_crop": "https://cards.scryfall.io/art_crop/front/f/e/fe2d08ac-6c24-4158-87a1-c59d1cd447a8.jpg?1674137554",
+    "border_crop": "https://cards.scryfall.io/border_crop/front/f/e/fe2d08ac-6c24-4158-87a1-c59d1cd447a8.jpg?1674137554"
+  },
+  "mana_cost": "{G}{U}",
+  "cmc": 2.0,
+  "type_line": "Legendary Creature \u2014 Dragon Bard",
+  "oracle_text": "You may look at the top card of your library any time.\nYou may cast Dragon spells from the top of your library.",
+  "power": "1",
+  "toughness": "4",
+  "colors": [
+    "G",
+    "U"
+  ],
+  "color_identity": [
+    "G",
+    "U"
+  ],
+  "keywords": [],
+  "legalities": {
+    "standard": "not_legal",
+    "future": "not_legal",
+    "historic": "legal",
+    "timeless": "legal",
+    "gladiator": "legal",
+    "pioneer": "not_legal",
+    "explorer": "not_legal",
+    "modern": "not_legal",
+    "legacy": "legal",
+    "pauper": "not_legal",
+    "vintage": "legal",
+    "penny": "not_legal",
+    "commander": "legal",
+    "oathbreaker": "legal",
+    "standardbrawl": "not_legal",
+    "brawl": "legal",
+    "alchemy": "not_legal",
+    "paupercommander": "not_legal",
+    "duel": "legal",
+    "oldschool": "not_legal",
+    "premodern": "not_legal",
+    "predh": "not_legal"
+  },
+  "games": [
+    "paper",
+    "mtgo"
+  ],
+  "reserved": false,
+  "game_changer": false,
+  "foil": true,
+  "nonfoil": true,
+  "finishes": [
+    "nonfoil",
+    "foil"
+  ],
+  "oversized": false,
+  "promo": false,
+  "reprint": false,
+  "variation": false,
+  "set_id": "5e4c3fe8-fd57-4b20-ad56-c03790a16cea",
+  "set": "clb",
+  "set_name": "Commander Legends: Battle for Baldur's Gate",
+  "set_type": "draft_innovation",
+  "set_uri": "https://api.scryfall.com/sets/5e4c3fe8-fd57-4b20-ad56-c03790a16cea",
+  "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Aclb&unique=prints",
+  "scryfall_set_uri": "https://scryfall.com/sets/clb?utm_source=api",
+  "rulings_uri": "https://api.scryfall.com/cards/fe2d08ac-6c24-4158-87a1-c59d1cd447a8/rulings",
+  "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3A2ceac1be-32ab-4a04-ade3-852926a5ca45&unique=prints",
+  "collector_number": "280",
+  "digital": false,
+  "rarity": "uncommon",
+  "flavor_text": "\"Would you like a song of wing-wind and fire, or one of gentle heartbeats atop a golden hoard?\"",
+  "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
+  "artist": "Jesper Ejsing",
+  "artist_ids": [
+    "a5f8354a-8b51-4e59-96b2-0e3aeae4fa1d"
+  ],
+  "illustration_id": "6f96d4ec-d5d1-4cf6-9abd-618327bb9429",
+  "border_color": "black",
+  "frame": "2015",
+  "frame_effects": [
+    "legendary"
+  ],
+  "full_art": false,
+  "textless": false,
+  "booster": true,
+  "story_spotlight": false,
+  "edhrec_rank": 2934,
+  "preview": {
+    "source": "The Commander Sphere",
+    "source_uri": "https://www.youtube.com/watch?v=8Uj521fqrEI",
+    "previewed_at": "2022-05-18"
+  },
+  "prices": {
+    "usd": "0.20",
+    "usd_foil": "6.65",
+    "usd_etched": null,
+    "eur": "0.19",
+    "eur_foil": "0.46",
+    "tix": "2.87"
+  },
+  "related_uris": {
+    "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=563163&printed=false",
+    "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Darticle%26game%3Dmagic%26q%3DKorlessa%252C%2BScale%2BSinger",
+    "tcgplayer_infinite_decks": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Ddeck%26game%3Dmagic%26q%3DKorlessa%252C%2BScale%2BSinger",
+    "edhrec": "https://edhrec.com/route/?cc=Korlessa%2C+Scale+Singer"
+  },
+  "purchase_uris": {
+    "tcgplayer": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F272701%3Fpage%3D1",
+    "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Singles/Commander-Legends-Battle-for-Baldurs-Gate/Korlessa-Scale-Singer?referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+    "cardhoarder": "https://www.cardhoarder.com/cards/100598?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall"
+  }
+}

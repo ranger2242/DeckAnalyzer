@@ -1,0 +1,127 @@
+{
+  "object": "card",
+  "id": "07b4a6dd-0e2f-43be-93c6-7578c34a9443",
+  "oracle_id": "819fc966-434e-470f-91e9-a38df974ad17",
+  "multiverse_ids": [
+    658734
+  ],
+  "mtgo_id": 125043,
+  "tcgplayer_id": 545225,
+  "cardmarket_id": 764928,
+  "name": "Drowned Catacomb",
+  "lang": "en",
+  "released_at": "2024-04-19",
+  "uri": "https://api.scryfall.com/cards/07b4a6dd-0e2f-43be-93c6-7578c34a9443",
+  "scryfall_uri": "https://scryfall.com/card/otc/290/drowned-catacomb?utm_source=api",
+  "layout": "normal",
+  "highres_image": true,
+  "image_status": "highres_scan",
+  "image_uris": {
+    "small": "https://cards.scryfall.io/small/front/0/7/07b4a6dd-0e2f-43be-93c6-7578c34a9443.jpg?1712354997",
+    "normal": "https://cards.scryfall.io/normal/front/0/7/07b4a6dd-0e2f-43be-93c6-7578c34a9443.jpg?1712354997",
+    "large": "https://cards.scryfall.io/large/front/0/7/07b4a6dd-0e2f-43be-93c6-7578c34a9443.jpg?1712354997",
+    "png": "https://cards.scryfall.io/png/front/0/7/07b4a6dd-0e2f-43be-93c6-7578c34a9443.png?1712354997",
+    "art_crop": "https://cards.scryfall.io/art_crop/front/0/7/07b4a6dd-0e2f-43be-93c6-7578c34a9443.jpg?1712354997",
+    "border_crop": "https://cards.scryfall.io/border_crop/front/0/7/07b4a6dd-0e2f-43be-93c6-7578c34a9443.jpg?1712354997"
+  },
+  "mana_cost": "",
+  "cmc": 0.0,
+  "type_line": "Land",
+  "oracle_text": "This land enters tapped unless you control an Island or a Swamp.\n{T}: Add {U} or {B}.",
+  "colors": [],
+  "color_identity": [
+    "B",
+    "U"
+  ],
+  "keywords": [],
+  "produced_mana": [
+    "B",
+    "U"
+  ],
+  "legalities": {
+    "standard": "not_legal",
+    "future": "not_legal",
+    "historic": "legal",
+    "timeless": "legal",
+    "gladiator": "legal",
+    "pioneer": "legal",
+    "explorer": "legal",
+    "modern": "legal",
+    "legacy": "legal",
+    "pauper": "not_legal",
+    "vintage": "legal",
+    "penny": "legal",
+    "commander": "legal",
+    "oathbreaker": "legal",
+    "standardbrawl": "not_legal",
+    "brawl": "legal",
+    "alchemy": "not_legal",
+    "paupercommander": "not_legal",
+    "duel": "legal",
+    "oldschool": "not_legal",
+    "premodern": "not_legal",
+    "predh": "legal"
+  },
+  "games": [
+    "paper",
+    "mtgo"
+  ],
+  "reserved": false,
+  "game_changer": false,
+  "foil": false,
+  "nonfoil": true,
+  "finishes": [
+    "nonfoil"
+  ],
+  "oversized": false,
+  "promo": false,
+  "reprint": true,
+  "variation": false,
+  "set_id": "d6548798-0c10-4509-b71a-2d8b1d14665a",
+  "set": "otc",
+  "set_name": "Outlaws of Thunder Junction Commander",
+  "set_type": "commander",
+  "set_uri": "https://api.scryfall.com/sets/d6548798-0c10-4509-b71a-2d8b1d14665a",
+  "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Aotc&unique=prints",
+  "scryfall_set_uri": "https://scryfall.com/sets/otc?utm_source=api",
+  "rulings_uri": "https://api.scryfall.com/cards/07b4a6dd-0e2f-43be-93c6-7578c34a9443/rulings",
+  "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3A819fc966-434e-470f-91e9-a38df974ad17&unique=prints",
+  "collector_number": "290",
+  "digital": false,
+  "rarity": "rare",
+  "flavor_text": "None can tell how many vessels are tangled up on the sea floor\u2014or how much treasure remains unclaimed.",
+  "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
+  "artist": "Jung Park",
+  "artist_ids": [
+    "269392ac-4c06-4650-98e2-d49a5a7f2371"
+  ],
+  "illustration_id": "e411bf25-c112-4c98-b3c1-64387c2402da",
+  "border_color": "black",
+  "frame": "2015",
+  "security_stamp": "oval",
+  "full_art": false,
+  "textless": false,
+  "booster": false,
+  "story_spotlight": false,
+  "edhrec_rank": 119,
+  "penny_rank": 69,
+  "prices": {
+    "usd": "2.01",
+    "usd_foil": null,
+    "usd_etched": null,
+    "eur": "2.43",
+    "eur_foil": null,
+    "tix": "0.15"
+  },
+  "related_uris": {
+    "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=658734&printed=false",
+    "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Darticle%26game%3Dmagic%26q%3DDrowned%2BCatacomb",
+    "tcgplayer_infinite_decks": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Ddeck%26game%3Dmagic%26q%3DDrowned%2BCatacomb",
+    "edhrec": "https://edhrec.com/route/?cc=Drowned+Catacomb"
+  },
+  "purchase_uris": {
+    "tcgplayer": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F545225%3Fpage%3D1",
+    "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Singles/Commander-Outlaws-of-Thunder-Junction/Drowned-Catacomb?referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+    "cardhoarder": "https://www.cardhoarder.com/cards/125043?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall"
+  }
+}

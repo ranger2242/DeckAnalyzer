@@ -1,0 +1,169 @@
+{
+  "object": "card",
+  "id": "d605c780-a42a-4816-8fb9-63e3114a8246",
+  "oracle_id": "28c46eb7-bdfc-44b9-b7e9-b073260851f0",
+  "multiverse_ids": [
+    489663
+  ],
+  "mtgo_id": 81747,
+  "arena_id": 72079,
+  "tcgplayer_id": 215369,
+  "cardmarket_id": 466404,
+  "name": "Rin and Seri, Inseparable",
+  "lang": "en",
+  "released_at": "2020-07-03",
+  "uri": "https://api.scryfall.com/cards/d605c780-a42a-4816-8fb9-63e3114a8246",
+  "scryfall_uri": "https://scryfall.com/card/m21/278/rin-and-seri-inseparable?utm_source=api",
+  "layout": "normal",
+  "highres_image": true,
+  "image_status": "highres_scan",
+  "image_uris": {
+    "small": "https://cards.scryfall.io/small/front/d/6/d605c780-a42a-4816-8fb9-63e3114a8246.jpg?1677724018",
+    "normal": "https://cards.scryfall.io/normal/front/d/6/d605c780-a42a-4816-8fb9-63e3114a8246.jpg?1677724018",
+    "large": "https://cards.scryfall.io/large/front/d/6/d605c780-a42a-4816-8fb9-63e3114a8246.jpg?1677724018",
+    "png": "https://cards.scryfall.io/png/front/d/6/d605c780-a42a-4816-8fb9-63e3114a8246.png?1677724018",
+    "art_crop": "https://cards.scryfall.io/art_crop/front/d/6/d605c780-a42a-4816-8fb9-63e3114a8246.jpg?1677724018",
+    "border_crop": "https://cards.scryfall.io/border_crop/front/d/6/d605c780-a42a-4816-8fb9-63e3114a8246.jpg?1677724018"
+  },
+  "mana_cost": "{1}{R}{G}{W}",
+  "cmc": 4.0,
+  "type_line": "Legendary Creature \u2014 Dog Cat",
+  "oracle_text": "Whenever you cast a Dog spell, create a 1/1 green Cat creature token.\nWhenever you cast a Cat spell, create a 1/1 white Dog creature token.\n{R}{G}{W}, {T}: Rin and Seri deals damage to any target equal to the number of Dogs you control. You gain life equal to the number of Cats you control.",
+  "power": "4",
+  "toughness": "4",
+  "colors": [
+    "G",
+    "R",
+    "W"
+  ],
+  "color_identity": [
+    "G",
+    "R",
+    "W"
+  ],
+  "keywords": [],
+  "all_parts": [
+    {
+      "object": "related_card",
+      "id": "d605c780-a42a-4816-8fb9-63e3114a8246",
+      "component": "combo_piece",
+      "name": "Rin and Seri, Inseparable",
+      "type_line": "Legendary Creature \u2014 Dog Cat",
+      "uri": "https://api.scryfall.com/cards/d605c780-a42a-4816-8fb9-63e3114a8246"
+    },
+    {
+      "object": "related_card",
+      "id": "4f8107b3-8539-4b9c-8d0d-c512c940838f",
+      "component": "token",
+      "name": "Dog",
+      "type_line": "Token Creature \u2014 Dog",
+      "uri": "https://api.scryfall.com/cards/4f8107b3-8539-4b9c-8d0d-c512c940838f"
+    },
+    {
+      "object": "related_card",
+      "id": "fbdf8dc1-1b10-4fce-97b9-1f5600500cc1",
+      "component": "token",
+      "name": "Cat",
+      "type_line": "Token Creature \u2014 Cat",
+      "uri": "https://api.scryfall.com/cards/fbdf8dc1-1b10-4fce-97b9-1f5600500cc1"
+    }
+  ],
+  "legalities": {
+    "standard": "not_legal",
+    "future": "not_legal",
+    "historic": "legal",
+    "timeless": "legal",
+    "gladiator": "legal",
+    "pioneer": "legal",
+    "explorer": "legal",
+    "modern": "legal",
+    "legacy": "legal",
+    "pauper": "not_legal",
+    "vintage": "legal",
+    "penny": "legal",
+    "commander": "legal",
+    "oathbreaker": "legal",
+    "standardbrawl": "not_legal",
+    "brawl": "legal",
+    "alchemy": "not_legal",
+    "paupercommander": "not_legal",
+    "duel": "legal",
+    "oldschool": "not_legal",
+    "premodern": "not_legal",
+    "predh": "not_legal"
+  },
+  "games": [
+    "arena",
+    "paper",
+    "mtgo"
+  ],
+  "reserved": false,
+  "game_changer": false,
+  "foil": true,
+  "nonfoil": true,
+  "finishes": [
+    "nonfoil",
+    "foil"
+  ],
+  "oversized": false,
+  "promo": true,
+  "reprint": false,
+  "variation": false,
+  "set_id": "bc94aba1-7376-4e02-a12d-3a2efb66ab0f",
+  "set": "m21",
+  "set_name": "Core Set 2021",
+  "set_type": "core",
+  "set_uri": "https://api.scryfall.com/sets/bc94aba1-7376-4e02-a12d-3a2efb66ab0f",
+  "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Am21&unique=prints",
+  "scryfall_set_uri": "https://scryfall.com/sets/m21?utm_source=api",
+  "rulings_uri": "https://api.scryfall.com/cards/d605c780-a42a-4816-8fb9-63e3114a8246/rulings",
+  "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3A28c46eb7-bdfc-44b9-b7e9-b073260851f0&unique=prints",
+  "collector_number": "278",
+  "digital": false,
+  "rarity": "mythic",
+  "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
+  "artist": "Leesha Hannigan",
+  "artist_ids": [
+    "0c5d1acd-714b-4e7a-b7bf-e3450b305337"
+  ],
+  "illustration_id": "fbe8e093-1f19-4fa6-bed5-2ae293f645ca",
+  "border_color": "black",
+  "frame": "2015",
+  "frame_effects": [
+    "legendary",
+    "extendedart"
+  ],
+  "security_stamp": "oval",
+  "full_art": false,
+  "textless": false,
+  "booster": false,
+  "story_spotlight": false,
+  "promo_types": [
+    "buyabox"
+  ],
+  "edhrec_rank": 4942,
+  "preview": {
+    "source": "Wizards of the Coast",
+    "source_uri": "https://magic.wizards.com/en/articles/archive/card-preview/collecting-core-set-2021-2020-06-05",
+    "previewed_at": "2020-06-05"
+  },
+  "prices": {
+    "usd": "25.65",
+    "usd_foil": "25.33",
+    "usd_etched": null,
+    "eur": "11.69",
+    "eur_foil": null,
+    "tix": "0.02"
+  },
+  "related_uris": {
+    "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=489663&printed=false",
+    "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Darticle%26game%3Dmagic%26q%3DRin%2Band%2BSeri%252C%2BInseparable",
+    "tcgplayer_infinite_decks": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Ddeck%26game%3Dmagic%26q%3DRin%2Band%2BSeri%252C%2BInseparable",
+    "edhrec": "https://edhrec.com/route/?cc=Rin+and+Seri%2C+Inseparable"
+  },
+  "purchase_uris": {
+    "tcgplayer": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F215369%3Fpage%3D1",
+    "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Singles/Core-2021-Extras/Rin-and-Seri-Inseparable?referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+    "cardhoarder": "https://www.cardhoarder.com/cards/81747?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall"
+  }
+}

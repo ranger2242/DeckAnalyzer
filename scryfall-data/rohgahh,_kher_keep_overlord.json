@@ -1,0 +1,162 @@
+{
+  "object": "card",
+  "id": "84e87400-cc3f-4476-b177-2c36a65f277b",
+  "oracle_id": "a14c692e-dce6-4121-84ec-7fa28ffe4d6b",
+  "multiverse_ids": [
+    597917
+  ],
+  "mtgo_id": 103524,
+  "tcgplayer_id": 283107,
+  "cardmarket_id": 671531,
+  "name": "Rohgahh, Kher Keep Overlord",
+  "lang": "en",
+  "released_at": "2022-09-09",
+  "uri": "https://api.scryfall.com/cards/84e87400-cc3f-4476-b177-2c36a65f277b",
+  "scryfall_uri": "https://scryfall.com/card/dmc/41/rohgahh-kher-keep-overlord?utm_source=api",
+  "layout": "normal",
+  "highres_image": true,
+  "image_status": "highres_scan",
+  "image_uris": {
+    "small": "https://cards.scryfall.io/small/front/8/4/84e87400-cc3f-4476-b177-2c36a65f277b.jpg?1673304981",
+    "normal": "https://cards.scryfall.io/normal/front/8/4/84e87400-cc3f-4476-b177-2c36a65f277b.jpg?1673304981",
+    "large": "https://cards.scryfall.io/large/front/8/4/84e87400-cc3f-4476-b177-2c36a65f277b.jpg?1673304981",
+    "png": "https://cards.scryfall.io/png/front/8/4/84e87400-cc3f-4476-b177-2c36a65f277b.png?1673304981",
+    "art_crop": "https://cards.scryfall.io/art_crop/front/8/4/84e87400-cc3f-4476-b177-2c36a65f277b.jpg?1673304981",
+    "border_crop": "https://cards.scryfall.io/border_crop/front/8/4/84e87400-cc3f-4476-b177-2c36a65f277b.jpg?1673304981"
+  },
+  "mana_cost": "{3}{B}{R}",
+  "cmc": 5.0,
+  "type_line": "Legendary Creature \u2014 Kobold Warrior",
+  "oracle_text": "Other Kobolds you control get +2/+2.\nWhenever you cast a Kobold spell, you may pay {2}. If you do, create a 4/4 red Dragon creature token with flying.\nWhenever you cast a Dragon spell, create a 0/1 red Kobold creature token named Kobolds of Kher Keep.",
+  "power": "4",
+  "toughness": "4",
+  "colors": [
+    "B",
+    "R"
+  ],
+  "color_identity": [
+    "B",
+    "R"
+  ],
+  "keywords": [],
+  "all_parts": [
+    {
+      "object": "related_card",
+      "id": "74f7dd3d-dbb9-4cbd-8d06-381cb6a0de33",
+      "component": "token",
+      "name": "Kobolds of Kher Keep",
+      "type_line": "Token Creature \u2014 Kobold",
+      "uri": "https://api.scryfall.com/cards/74f7dd3d-dbb9-4cbd-8d06-381cb6a0de33"
+    },
+    {
+      "object": "related_card",
+      "id": "d3488954-e248-40f2-8194-0c5ae78cd6d4",
+      "component": "combo_piece",
+      "name": "Rohgahh, Kher Keep Overlord",
+      "type_line": "Legendary Creature \u2014 Kobold Warrior",
+      "uri": "https://api.scryfall.com/cards/d3488954-e248-40f2-8194-0c5ae78cd6d4"
+    },
+    {
+      "object": "related_card",
+      "id": "d1cae334-1e24-48a3-83a2-0a27bc9d3b29",
+      "component": "token",
+      "name": "Dragon",
+      "type_line": "Token Creature \u2014 Dragon",
+      "uri": "https://api.scryfall.com/cards/d1cae334-1e24-48a3-83a2-0a27bc9d3b29"
+    }
+  ],
+  "legalities": {
+    "standard": "not_legal",
+    "future": "not_legal",
+    "historic": "not_legal",
+    "timeless": "not_legal",
+    "gladiator": "not_legal",
+    "pioneer": "not_legal",
+    "explorer": "not_legal",
+    "modern": "not_legal",
+    "legacy": "legal",
+    "pauper": "not_legal",
+    "vintage": "legal",
+    "penny": "not_legal",
+    "commander": "legal",
+    "oathbreaker": "legal",
+    "standardbrawl": "not_legal",
+    "brawl": "not_legal",
+    "alchemy": "not_legal",
+    "paupercommander": "not_legal",
+    "duel": "legal",
+    "oldschool": "not_legal",
+    "premodern": "not_legal",
+    "predh": "not_legal"
+  },
+  "games": [
+    "paper",
+    "mtgo"
+  ],
+  "reserved": false,
+  "game_changer": false,
+  "foil": true,
+  "nonfoil": true,
+  "finishes": [
+    "nonfoil",
+    "foil"
+  ],
+  "oversized": false,
+  "promo": false,
+  "reprint": false,
+  "variation": false,
+  "set_id": "78076b27-f888-4723-b27c-44074accd261",
+  "set": "dmc",
+  "set_name": "Dominaria United Commander",
+  "set_type": "commander",
+  "set_uri": "https://api.scryfall.com/sets/78076b27-f888-4723-b27c-44074accd261",
+  "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Admc&unique=prints",
+  "scryfall_set_uri": "https://scryfall.com/sets/dmc?utm_source=api",
+  "rulings_uri": "https://api.scryfall.com/cards/84e87400-cc3f-4476-b177-2c36a65f277b/rulings",
+  "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3Aa14c692e-dce6-4121-84ec-7fa28ffe4d6b&unique=prints",
+  "collector_number": "41",
+  "digital": false,
+  "rarity": "rare",
+  "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
+  "artist": "Chris Seaman",
+  "artist_ids": [
+    "b9c49463-6f55-4039-9d32-c02a658af100"
+  ],
+  "illustration_id": "c3d7799e-baad-43f6-8e02-5ceb697e9892",
+  "border_color": "black",
+  "frame": "2015",
+  "frame_effects": [
+    "legendary"
+  ],
+  "security_stamp": "oval",
+  "full_art": false,
+  "textless": false,
+  "booster": false,
+  "story_spotlight": false,
+  "edhrec_rank": 15735,
+  "penny_rank": 9393,
+  "preview": {
+    "source": "NME",
+    "source_uri": "https://www.nme.com/news/gaming-news/heres-two-exclusive-magic-the-gathering-cards-from-dominaria-united-3292770",
+    "previewed_at": "2022-08-18"
+  },
+  "prices": {
+    "usd": "0.16",
+    "usd_foil": "0.27",
+    "usd_etched": null,
+    "eur": "0.28",
+    "eur_foil": "0.47",
+    "tix": "0.08"
+  },
+  "related_uris": {
+    "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=597917&printed=false",
+    "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Darticle%26game%3Dmagic%26q%3DRohgahh%252C%2BKher%2BKeep%2BOverlord",
+    "tcgplayer_infinite_decks": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Ddeck%26game%3Dmagic%26q%3DRohgahh%252C%2BKher%2BKeep%2BOverlord",
+    "edhrec": "https://edhrec.com/route/?cc=Rohgahh%2C+Kher+Keep+Overlord"
+  },
+  "purchase_uris": {
+    "tcgplayer": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F283107%3Fpage%3D1",
+    "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Singles/Commander-Dominaria-United/Rohgahh-Kher-Keep-Overlord?referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+    "cardhoarder": "https://www.cardhoarder.com/cards/103524?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall"
+  }
+}

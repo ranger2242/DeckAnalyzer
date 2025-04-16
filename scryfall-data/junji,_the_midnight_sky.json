@@ -1,0 +1,131 @@
+{
+  "object": "card",
+  "id": "e9ff50c0-915e-4055-a595-3df6be8f1e1b",
+  "oracle_id": "78a48f4e-ba4c-4d8d-938a-9ddb342a885b",
+  "multiverse_ids": [
+    696339
+  ],
+  "mtgo_id": 138303,
+  "tcgplayer_id": 624422,
+  "cardmarket_id": 818792,
+  "name": "Junji, the Midnight Sky",
+  "lang": "en",
+  "released_at": "2025-04-11",
+  "uri": "https://api.scryfall.com/cards/e9ff50c0-915e-4055-a595-3df6be8f1e1b",
+  "scryfall_uri": "https://scryfall.com/card/tdc/183/junji-the-midnight-sky?utm_source=api",
+  "layout": "normal",
+  "highres_image": false,
+  "image_status": "lowres",
+  "image_uris": {
+    "small": "https://cards.scryfall.io/small/front/e/9/e9ff50c0-915e-4055-a595-3df6be8f1e1b.jpg?1743206508",
+    "normal": "https://cards.scryfall.io/normal/front/e/9/e9ff50c0-915e-4055-a595-3df6be8f1e1b.jpg?1743206508",
+    "large": "https://cards.scryfall.io/large/front/e/9/e9ff50c0-915e-4055-a595-3df6be8f1e1b.jpg?1743206508",
+    "png": "https://cards.scryfall.io/png/front/e/9/e9ff50c0-915e-4055-a595-3df6be8f1e1b.png?1743206508",
+    "art_crop": "https://cards.scryfall.io/art_crop/front/e/9/e9ff50c0-915e-4055-a595-3df6be8f1e1b.jpg?1743206508",
+    "border_crop": "https://cards.scryfall.io/border_crop/front/e/9/e9ff50c0-915e-4055-a595-3df6be8f1e1b.jpg?1743206508"
+  },
+  "mana_cost": "{3}{B}{B}",
+  "cmc": 5.0,
+  "type_line": "Legendary Creature \u2014 Dragon Spirit",
+  "oracle_text": "Flying, menace\nWhen Junji dies, choose one \u2014\n\u2022 Each opponent discards two cards and loses 2 life.\n\u2022 Put target non-Dragon creature card from a graveyard onto the battlefield under your control. You lose 2 life.",
+  "power": "5",
+  "toughness": "5",
+  "colors": [
+    "B"
+  ],
+  "color_identity": [
+    "B"
+  ],
+  "keywords": [
+    "Flying",
+    "Menace"
+  ],
+  "legalities": {
+    "standard": "not_legal",
+    "future": "not_legal",
+    "historic": "legal",
+    "timeless": "legal",
+    "gladiator": "legal",
+    "pioneer": "legal",
+    "explorer": "legal",
+    "modern": "legal",
+    "legacy": "legal",
+    "pauper": "not_legal",
+    "vintage": "legal",
+    "penny": "legal",
+    "commander": "legal",
+    "oathbreaker": "legal",
+    "standardbrawl": "not_legal",
+    "brawl": "legal",
+    "alchemy": "not_legal",
+    "paupercommander": "not_legal",
+    "duel": "legal",
+    "oldschool": "not_legal",
+    "premodern": "not_legal",
+    "predh": "not_legal"
+  },
+  "games": [
+    "paper",
+    "mtgo"
+  ],
+  "reserved": false,
+  "game_changer": false,
+  "foil": false,
+  "nonfoil": true,
+  "finishes": [
+    "nonfoil"
+  ],
+  "oversized": false,
+  "promo": false,
+  "reprint": true,
+  "variation": false,
+  "set_id": "bca9779c-0a0b-4ac1-8794-f3fc25549cf4",
+  "set": "tdc",
+  "set_name": "Tarkir: Dragonstorm Commander",
+  "set_type": "commander",
+  "set_uri": "https://api.scryfall.com/sets/bca9779c-0a0b-4ac1-8794-f3fc25549cf4",
+  "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Atdc&unique=prints",
+  "scryfall_set_uri": "https://scryfall.com/sets/tdc?utm_source=api",
+  "rulings_uri": "https://api.scryfall.com/cards/e9ff50c0-915e-4055-a595-3df6be8f1e1b/rulings",
+  "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3A78a48f4e-ba4c-4d8d-938a-9ddb342a885b&unique=prints",
+  "collector_number": "183",
+  "digital": false,
+  "rarity": "mythic",
+  "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
+  "artist": "Chase Stone",
+  "artist_ids": [
+    "2d753f61-5f5b-468e-97ea-8e0fdd347340"
+  ],
+  "illustration_id": "ca4b32ec-4236-4d01-9372-a6aa1b688119",
+  "border_color": "black",
+  "frame": "2015",
+  "frame_effects": [
+    "legendary"
+  ],
+  "security_stamp": "oval",
+  "full_art": false,
+  "textless": false,
+  "booster": false,
+  "story_spotlight": false,
+  "edhrec_rank": 1156,
+  "penny_rank": 6908,
+  "prices": {
+    "usd": "0.47",
+    "usd_foil": null,
+    "usd_etched": null,
+    "eur": "0.69",
+    "eur_foil": null,
+    "tix": "0.05"
+  },
+  "related_uris": {
+    "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=696339&printed=false",
+    "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Darticle%26game%3Dmagic%26q%3DJunji%252C%2Bthe%2BMidnight%2BSky",
+    "tcgplayer_infinite_decks": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Ddeck%26game%3Dmagic%26q%3DJunji%252C%2Bthe%2BMidnight%2BSky",
+    "edhrec": "https://edhrec.com/route/?cc=Junji%2C+the+Midnight+Sky"
+  },
+  "purchase_uris": {
+    "tcgplayer": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F624422%3Fpage%3D1",
+    "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Singles/Commander-Tarkir-Dragonstorm/Junji-the-Midnight-Sky?referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+    "cardhoarder": "https://www.cardhoarder.com/cards/138303?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall"
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "object": "card",
+  "id": "2b45e8e8-4484-4c62-b507-5edb98d77f54",
+  "oracle_id": "bd912666-f37f-4767-af6f-9e6d0fcccacf",
+  "multiverse_ids": [
+    696530
+  ],
+  "mtgo_id": 138689,
+  "tcgplayer_id": 624975,
+  "cardmarket_id": 819332,
+  "name": "Karplusan Forest",
+  "lang": "en",
+  "released_at": "2025-04-11",
+  "uri": "https://api.scryfall.com/cards/2b45e8e8-4484-4c62-b507-5edb98d77f54",
+  "scryfall_uri": "https://scryfall.com/card/tdc/374/karplusan-forest?utm_source=api",
+  "layout": "normal",
+  "highres_image": false,
+  "image_status": "lowres",
+  "image_uris": {
+    "small": "https://cards.scryfall.io/small/front/2/b/2b45e8e8-4484-4c62-b507-5edb98d77f54.jpg?1743207626",
+    "normal": "https://cards.scryfall.io/normal/front/2/b/2b45e8e8-4484-4c62-b507-5edb98d77f54.jpg?1743207626",
+    "large": "https://cards.scryfall.io/large/front/2/b/2b45e8e8-4484-4c62-b507-5edb98d77f54.jpg?1743207626",
+    "png": "https://cards.scryfall.io/png/front/2/b/2b45e8e8-4484-4c62-b507-5edb98d77f54.png?1743207626",
+    "art_crop": "https://cards.scryfall.io/art_crop/front/2/b/2b45e8e8-4484-4c62-b507-5edb98d77f54.jpg?1743207626",
+    "border_crop": "https://cards.scryfall.io/border_crop/front/2/b/2b45e8e8-4484-4c62-b507-5edb98d77f54.jpg?1743207626"
+  },
+  "mana_cost": "",
+  "cmc": 0.0,
+  "type_line": "Land",
+  "oracle_text": "{T}: Add {C}.\n{T}: Add {R} or {G}. This land deals 1 damage to you.",
+  "colors": [],
+  "color_identity": [
+    "G",
+    "R"
+  ],
+  "keywords": [],
+  "produced_mana": [
+    "C",
+    "G",
+    "R"
+  ],
+  "legalities": {
+    "standard": "legal",
+    "future": "legal",
+    "historic": "legal",
+    "timeless": "legal",
+    "gladiator": "legal",
+    "pioneer": "legal",
+    "explorer": "legal",
+    "modern": "legal",
+    "legacy": "legal",
+    "pauper": "not_legal",
+    "vintage": "legal",
+    "penny": "not_legal",
+    "commander": "legal",
+    "oathbreaker": "legal",
+    "standardbrawl": "legal",
+    "brawl": "legal",
+    "alchemy": "not_legal",
+    "paupercommander": "not_legal",
+    "duel": "legal",
+    "oldschool": "not_legal",
+    "premodern": "legal",
+    "predh": "legal"
+  },
+  "games": [
+    "paper",
+    "mtgo"
+  ],
+  "reserved": false,
+  "game_changer": false,
+  "foil": false,
+  "nonfoil": true,
+  "finishes": [
+    "nonfoil"
+  ],
+  "oversized": false,
+  "promo": false,
+  "reprint": true,
+  "variation": false,
+  "set_id": "bca9779c-0a0b-4ac1-8794-f3fc25549cf4",
+  "set": "tdc",
+  "set_name": "Tarkir: Dragonstorm Commander",
+  "set_type": "commander",
+  "set_uri": "https://api.scryfall.com/sets/bca9779c-0a0b-4ac1-8794-f3fc25549cf4",
+  "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Atdc&unique=prints",
+  "scryfall_set_uri": "https://scryfall.com/sets/tdc?utm_source=api",
+  "rulings_uri": "https://api.scryfall.com/cards/2b45e8e8-4484-4c62-b507-5edb98d77f54/rulings",
+  "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3Abd912666-f37f-4767-af6f-9e6d0fcccacf&unique=prints",
+  "collector_number": "374",
+  "digital": false,
+  "rarity": "rare",
+  "flavor_text": "Between jagged, snowcapped peaks, the dense bands of hardy evergreens provide the perfect cover for roving bands of orc and goblin raiders.",
+  "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
+  "artist": "Sam Burley",
+  "artist_ids": [
+    "f89f4b78-cefb-41f7-b7cb-4f4d28de0c4f"
+  ],
+  "illustration_id": "3f0e0bc4-8782-4888-b496-21c849a3694e",
+  "border_color": "black",
+  "frame": "2015",
+  "security_stamp": "oval",
+  "full_art": false,
+  "textless": false,
+  "booster": false,
+  "story_spotlight": false,
+  "edhrec_rank": 279,
+  "penny_rank": 183,
+  "prices": {
+    "usd": "0.43",
+    "usd_foil": null,
+    "usd_etched": null,
+    "eur": "2.06",
+    "eur_foil": null,
+    "tix": "0.20"
+  },
+  "related_uris": {
+    "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=696530&printed=false",
+    "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Darticle%26game%3Dmagic%26q%3DKarplusan%2BForest",
+    "tcgplayer_infinite_decks": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Ddeck%26game%3Dmagic%26q%3DKarplusan%2BForest",
+    "edhrec": "https://edhrec.com/route/?cc=Karplusan+Forest"
+  },
+  "purchase_uris": {
+    "tcgplayer": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F624975%3Fpage%3D1",
+    "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Singles/Commander-Tarkir-Dragonstorm/Karplusan-Forest?referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+    "cardhoarder": "https://www.cardhoarder.com/cards/138689?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall"
+  }
+}

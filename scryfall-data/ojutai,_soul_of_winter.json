@@ -1,0 +1,129 @@
+{
+  "object": "card",
+  "id": "7eb90a6b-da46-44ab-88b8-31aaffdee75b",
+  "oracle_id": "27d7f737-59a4-4948-9b2e-599ae848e054",
+  "multiverse_ids": [
+    433119
+  ],
+  "tcgplayer_id": 140001,
+  "cardmarket_id": 300501,
+  "name": "Ojutai, Soul of Winter",
+  "lang": "en",
+  "released_at": "2017-08-25",
+  "uri": "https://api.scryfall.com/cards/7eb90a6b-da46-44ab-88b8-31aaffdee75b",
+  "scryfall_uri": "https://scryfall.com/card/c17/187/ojutai-soul-of-winter?utm_source=api",
+  "layout": "normal",
+  "highres_image": true,
+  "image_status": "highres_scan",
+  "image_uris": {
+    "small": "https://cards.scryfall.io/small/front/7/e/7eb90a6b-da46-44ab-88b8-31aaffdee75b.jpg?1562614387",
+    "normal": "https://cards.scryfall.io/normal/front/7/e/7eb90a6b-da46-44ab-88b8-31aaffdee75b.jpg?1562614387",
+    "large": "https://cards.scryfall.io/large/front/7/e/7eb90a6b-da46-44ab-88b8-31aaffdee75b.jpg?1562614387",
+    "png": "https://cards.scryfall.io/png/front/7/e/7eb90a6b-da46-44ab-88b8-31aaffdee75b.png?1562614387",
+    "art_crop": "https://cards.scryfall.io/art_crop/front/7/e/7eb90a6b-da46-44ab-88b8-31aaffdee75b.jpg?1562614387",
+    "border_crop": "https://cards.scryfall.io/border_crop/front/7/e/7eb90a6b-da46-44ab-88b8-31aaffdee75b.jpg?1562614387"
+  },
+  "mana_cost": "{5}{W}{U}",
+  "cmc": 7.0,
+  "type_line": "Legendary Creature \u2014 Dragon",
+  "oracle_text": "Flying, vigilance\nWhenever a Dragon you control attacks, tap target nonland permanent an opponent controls. That permanent doesn't untap during its controller's next untap step.",
+  "power": "5",
+  "toughness": "6",
+  "colors": [
+    "U",
+    "W"
+  ],
+  "color_identity": [
+    "U",
+    "W"
+  ],
+  "keywords": [
+    "Flying",
+    "Vigilance"
+  ],
+  "legalities": {
+    "standard": "not_legal",
+    "future": "not_legal",
+    "historic": "not_legal",
+    "timeless": "not_legal",
+    "gladiator": "not_legal",
+    "pioneer": "legal",
+    "explorer": "not_legal",
+    "modern": "legal",
+    "legacy": "legal",
+    "pauper": "not_legal",
+    "vintage": "legal",
+    "penny": "legal",
+    "commander": "legal",
+    "oathbreaker": "legal",
+    "standardbrawl": "not_legal",
+    "brawl": "not_legal",
+    "alchemy": "not_legal",
+    "paupercommander": "not_legal",
+    "duel": "legal",
+    "oldschool": "not_legal",
+    "premodern": "not_legal",
+    "predh": "not_legal"
+  },
+  "games": [
+    "paper"
+  ],
+  "reserved": false,
+  "game_changer": false,
+  "foil": false,
+  "nonfoil": true,
+  "finishes": [
+    "nonfoil"
+  ],
+  "oversized": false,
+  "promo": false,
+  "reprint": true,
+  "variation": false,
+  "set_id": "5caec427-0c78-4c37-b4ec-30f7e0ba9abf",
+  "set": "c17",
+  "set_name": "Commander 2017",
+  "set_type": "commander",
+  "set_uri": "https://api.scryfall.com/sets/5caec427-0c78-4c37-b4ec-30f7e0ba9abf",
+  "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Ac17&unique=prints",
+  "scryfall_set_uri": "https://scryfall.com/sets/c17?utm_source=api",
+  "rulings_uri": "https://api.scryfall.com/cards/7eb90a6b-da46-44ab-88b8-31aaffdee75b/rulings",
+  "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3A27d7f737-59a4-4948-9b2e-599ae848e054&unique=prints",
+  "collector_number": "187",
+  "digital": false,
+  "rarity": "rare",
+  "flavor_text": "\"When I battled Ojutai, I realized my learning had only begun.\"\n\u2014Shu Yun, the Silent Tempest",
+  "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
+  "artist": "Chase Stone",
+  "artist_ids": [
+    "2d753f61-5f5b-468e-97ea-8e0fdd347340"
+  ],
+  "illustration_id": "bae3bb32-c7ac-4a32-b7e0-e65cbc325b60",
+  "border_color": "black",
+  "frame": "2015",
+  "security_stamp": "oval",
+  "full_art": false,
+  "textless": false,
+  "booster": false,
+  "story_spotlight": false,
+  "edhrec_rank": 6851,
+  "penny_rank": 9546,
+  "prices": {
+    "usd": "0.59",
+    "usd_foil": null,
+    "usd_etched": null,
+    "eur": "0.52",
+    "eur_foil": null,
+    "tix": null
+  },
+  "related_uris": {
+    "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=433119&printed=false",
+    "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Darticle%26game%3Dmagic%26q%3DOjutai%252C%2BSoul%2Bof%2BWinter",
+    "tcgplayer_infinite_decks": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Ddeck%26game%3Dmagic%26q%3DOjutai%252C%2BSoul%2Bof%2BWinter",
+    "edhrec": "https://edhrec.com/route/?cc=Ojutai%2C+Soul+of+Winter"
+  },
+  "purchase_uris": {
+    "tcgplayer": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F140001%3Fpage%3D1",
+    "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Singles/Commander-2017/Ojutai-Soul-of-Winter?referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+    "cardhoarder": "https://www.cardhoarder.com/cards?affiliate_id=scryfall&data%5Bsearch%5D=Ojutai%2C+Soul+of+Winter&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall"
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "object": "card",
+  "id": "6fc0a74b-0b8a-4c70-87f2-f9f2625d5ff2",
+  "oracle_id": "16aa790a-8f7c-401c-9d43-dc9440a6f585",
+  "multiverse_ids": [
+    695973
+  ],
+  "mtgo_id": 138105,
+  "tcgplayer_id": 624954,
+  "cardmarket_id": 819283,
+  "name": "Broodcaller Scourge",
+  "lang": "en",
+  "released_at": "2025-04-11",
+  "uri": "https://api.scryfall.com/cards/6fc0a74b-0b8a-4c70-87f2-f9f2625d5ff2",
+  "scryfall_uri": "https://scryfall.com/card/tdc/44/broodcaller-scourge?utm_source=api",
+  "layout": "normal",
+  "highres_image": false,
+  "image_status": "lowres",
+  "image_uris": {
+    "small": "https://cards.scryfall.io/small/front/6/f/6fc0a74b-0b8a-4c70-87f2-f9f2625d5ff2.jpg?1743205850",
+    "normal": "https://cards.scryfall.io/normal/front/6/f/6fc0a74b-0b8a-4c70-87f2-f9f2625d5ff2.jpg?1743205850",
+    "large": "https://cards.scryfall.io/large/front/6/f/6fc0a74b-0b8a-4c70-87f2-f9f2625d5ff2.jpg?1743205850",
+    "png": "https://cards.scryfall.io/png/front/6/f/6fc0a74b-0b8a-4c70-87f2-f9f2625d5ff2.png?1743205850",
+    "art_crop": "https://cards.scryfall.io/art_crop/front/6/f/6fc0a74b-0b8a-4c70-87f2-f9f2625d5ff2.jpg?1743205850",
+    "border_crop": "https://cards.scryfall.io/border_crop/front/6/f/6fc0a74b-0b8a-4c70-87f2-f9f2625d5ff2.jpg?1743205850"
+  },
+  "mana_cost": "{5}{G}{G}",
+  "cmc": 7.0,
+  "type_line": "Creature \u2014 Dragon",
+  "oracle_text": "Flying\nWhenever one or more Dragons you control deal combat damage to a player, you may put a permanent card with mana value less than or equal to that damage from your hand onto the battlefield.",
+  "power": "5",
+  "toughness": "7",
+  "colors": [
+    "G"
+  ],
+  "color_identity": [
+    "G"
+  ],
+  "keywords": [
+    "Flying"
+  ],
+  "legalities": {
+    "standard": "not_legal",
+    "future": "not_legal",
+    "historic": "not_legal",
+    "timeless": "not_legal",
+    "gladiator": "not_legal",
+    "pioneer": "not_legal",
+    "explorer": "not_legal",
+    "modern": "not_legal",
+    "legacy": "legal",
+    "pauper": "not_legal",
+    "vintage": "legal",
+    "penny": "not_legal",
+    "commander": "legal",
+    "oathbreaker": "legal",
+    "standardbrawl": "not_legal",
+    "brawl": "not_legal",
+    "alchemy": "not_legal",
+    "paupercommander": "not_legal",
+    "duel": "legal",
+    "oldschool": "not_legal",
+    "premodern": "not_legal",
+    "predh": "not_legal"
+  },
+  "games": [
+    "paper",
+    "mtgo"
+  ],
+  "reserved": false,
+  "game_changer": false,
+  "foil": false,
+  "nonfoil": true,
+  "finishes": [
+    "nonfoil"
+  ],
+  "oversized": false,
+  "promo": false,
+  "reprint": false,
+  "variation": false,
+  "set_id": "bca9779c-0a0b-4ac1-8794-f3fc25549cf4",
+  "set": "tdc",
+  "set_name": "Tarkir: Dragonstorm Commander",
+  "set_type": "commander",
+  "set_uri": "https://api.scryfall.com/sets/bca9779c-0a0b-4ac1-8794-f3fc25549cf4",
+  "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Atdc&unique=prints",
+  "scryfall_set_uri": "https://scryfall.com/sets/tdc?utm_source=api",
+  "rulings_uri": "https://api.scryfall.com/cards/6fc0a74b-0b8a-4c70-87f2-f9f2625d5ff2/rulings",
+  "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3A16aa790a-8f7c-401c-9d43-dc9440a6f585&unique=prints",
+  "collector_number": "44",
+  "digital": false,
+  "rarity": "rare",
+  "flavor_text": "Younger dragons bow to its will, not out of respect, but out of fear.",
+  "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
+  "artist": "Lo\u00efc Canavaggia",
+  "artist_ids": [
+    "f1e2e10b-08be-4e92-8f50-95a72850a811"
+  ],
+  "illustration_id": "2a503fd5-423e-4232-addd-74a47cc4c765",
+  "border_color": "black",
+  "frame": "2015",
+  "security_stamp": "oval",
+  "full_art": false,
+  "textless": false,
+  "booster": false,
+  "story_spotlight": false,
+  "edhrec_rank": 10576,
+  "prices": {
+    "usd": "1.16",
+    "usd_foil": null,
+    "usd_etched": null,
+    "eur": "4.14",
+    "eur_foil": null,
+    "tix": "1.03"
+  },
+  "related_uris": {
+    "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=695973&printed=false",
+    "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Darticle%26game%3Dmagic%26q%3DBroodcaller%2BScourge",
+    "tcgplayer_infinite_decks": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Ddeck%26game%3Dmagic%26q%3DBroodcaller%2BScourge",
+    "edhrec": "https://edhrec.com/route/?cc=Broodcaller+Scourge"
+  },
+  "purchase_uris": {
+    "tcgplayer": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F624954%3Fpage%3D1",
+    "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Singles/Commander-Tarkir-Dragonstorm/Broodcaller-Scourge?referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+    "cardhoarder": "https://www.cardhoarder.com/cards/138105?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall"
+  }
+}

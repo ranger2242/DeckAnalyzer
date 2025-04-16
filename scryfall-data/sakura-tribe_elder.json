@@ -1,0 +1,124 @@
+{
+  "object": "card",
+  "id": "d619aece-7eab-40f3-8f41-970065f0dc73",
+  "oracle_id": "e3afc704-220f-498f-9eaa-0821b17dc24c",
+  "multiverse_ids": [
+    696422
+  ],
+  "mtgo_id": 138469,
+  "tcgplayer_id": 624464,
+  "cardmarket_id": 818846,
+  "name": "Sakura-Tribe Elder",
+  "lang": "en",
+  "released_at": "2025-04-11",
+  "uri": "https://api.scryfall.com/cards/d619aece-7eab-40f3-8f41-970065f0dc73",
+  "scryfall_uri": "https://scryfall.com/card/tdc/266/sakura-tribe-elder?utm_source=api",
+  "layout": "normal",
+  "highres_image": false,
+  "image_status": "lowres",
+  "image_uris": {
+    "small": "https://cards.scryfall.io/small/front/d/6/d619aece-7eab-40f3-8f41-970065f0dc73.jpg?1743206988",
+    "normal": "https://cards.scryfall.io/normal/front/d/6/d619aece-7eab-40f3-8f41-970065f0dc73.jpg?1743206988",
+    "large": "https://cards.scryfall.io/large/front/d/6/d619aece-7eab-40f3-8f41-970065f0dc73.jpg?1743206988",
+    "png": "https://cards.scryfall.io/png/front/d/6/d619aece-7eab-40f3-8f41-970065f0dc73.png?1743206988",
+    "art_crop": "https://cards.scryfall.io/art_crop/front/d/6/d619aece-7eab-40f3-8f41-970065f0dc73.jpg?1743206988",
+    "border_crop": "https://cards.scryfall.io/border_crop/front/d/6/d619aece-7eab-40f3-8f41-970065f0dc73.jpg?1743206988"
+  },
+  "mana_cost": "{1}{G}",
+  "cmc": 2.0,
+  "type_line": "Creature \u2014 Snake Shaman",
+  "oracle_text": "Sacrifice this creature: Search your library for a basic land card, put that card onto the battlefield tapped, then shuffle.",
+  "power": "1",
+  "toughness": "1",
+  "colors": [
+    "G"
+  ],
+  "color_identity": [
+    "G"
+  ],
+  "keywords": [],
+  "legalities": {
+    "standard": "not_legal",
+    "future": "not_legal",
+    "historic": "not_legal",
+    "timeless": "not_legal",
+    "gladiator": "not_legal",
+    "pioneer": "not_legal",
+    "explorer": "not_legal",
+    "modern": "legal",
+    "legacy": "legal",
+    "pauper": "legal",
+    "vintage": "legal",
+    "penny": "not_legal",
+    "commander": "legal",
+    "oathbreaker": "legal",
+    "standardbrawl": "not_legal",
+    "brawl": "not_legal",
+    "alchemy": "not_legal",
+    "paupercommander": "legal",
+    "duel": "legal",
+    "oldschool": "not_legal",
+    "premodern": "not_legal",
+    "predh": "legal"
+  },
+  "games": [
+    "paper",
+    "mtgo"
+  ],
+  "reserved": false,
+  "game_changer": false,
+  "foil": false,
+  "nonfoil": true,
+  "finishes": [
+    "nonfoil"
+  ],
+  "oversized": false,
+  "promo": false,
+  "reprint": true,
+  "variation": false,
+  "set_id": "bca9779c-0a0b-4ac1-8794-f3fc25549cf4",
+  "set": "tdc",
+  "set_name": "Tarkir: Dragonstorm Commander",
+  "set_type": "commander",
+  "set_uri": "https://api.scryfall.com/sets/bca9779c-0a0b-4ac1-8794-f3fc25549cf4",
+  "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Atdc&unique=prints",
+  "scryfall_set_uri": "https://scryfall.com/sets/tdc?utm_source=api",
+  "rulings_uri": "https://api.scryfall.com/cards/d619aece-7eab-40f3-8f41-970065f0dc73/rulings",
+  "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3Ae3afc704-220f-498f-9eaa-0821b17dc24c&unique=prints",
+  "collector_number": "266",
+  "digital": false,
+  "rarity": "common",
+  "flavor_text": "There were no tombstones in orochi territory. Slain warriors were buried with a tree sapling, so they would become a part of the forest after death.",
+  "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
+  "artist": "Ted Galaday",
+  "artist_ids": [
+    "76ca69fd-d8f1-4a01-8c90-e1ba356e7563"
+  ],
+  "illustration_id": "0bfc6b5a-a1b1-4b6c-9f0c-d9f6b6090b5a",
+  "border_color": "black",
+  "frame": "2015",
+  "full_art": false,
+  "textless": false,
+  "booster": false,
+  "story_spotlight": false,
+  "edhrec_rank": 85,
+  "prices": {
+    "usd": "0.34",
+    "usd_foil": null,
+    "usd_etched": null,
+    "eur": "0.53",
+    "eur_foil": null,
+    "tix": "0.05"
+  },
+  "related_uris": {
+    "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=696422&printed=false",
+    "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Darticle%26game%3Dmagic%26q%3DSakura-Tribe%2BElder",
+    "tcgplayer_infinite_decks": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Ddeck%26game%3Dmagic%26q%3DSakura-Tribe%2BElder",
+    "edhrec": "https://edhrec.com/route/?cc=Sakura-Tribe+Elder"
+  },
+  "purchase_uris": {
+    "tcgplayer": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F624464%3Fpage%3D1",
+    "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Singles/Commander-Tarkir-Dragonstorm/Sakura-Tribe-Elder?referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+    "cardhoarder": "https://www.cardhoarder.com/cards/138469?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall"
+  }
+}

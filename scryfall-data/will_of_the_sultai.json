@@ -1,0 +1,125 @@
+{
+  "object": "card",
+  "id": "37155f69-1d72-4fcb-80b3-548b7d78f9ec",
+  "oracle_id": "951a0e34-e610-477f-b441-6680df55a29b",
+  "multiverse_ids": [
+    695978
+  ],
+  "mtgo_id": 138115,
+  "tcgplayer_id": 624480,
+  "cardmarket_id": 818705,
+  "name": "Will of the Sultai",
+  "lang": "en",
+  "released_at": "2025-04-11",
+  "uri": "https://api.scryfall.com/cards/37155f69-1d72-4fcb-80b3-548b7d78f9ec",
+  "scryfall_uri": "https://scryfall.com/card/tdc/49/will-of-the-sultai?utm_source=api",
+  "layout": "normal",
+  "highres_image": false,
+  "image_status": "lowres",
+  "image_uris": {
+    "small": "https://cards.scryfall.io/small/front/3/7/37155f69-1d72-4fcb-80b3-548b7d78f9ec.jpg?1744499389",
+    "normal": "https://cards.scryfall.io/normal/front/3/7/37155f69-1d72-4fcb-80b3-548b7d78f9ec.jpg?1744499389",
+    "large": "https://cards.scryfall.io/large/front/3/7/37155f69-1d72-4fcb-80b3-548b7d78f9ec.jpg?1744499389",
+    "png": "https://cards.scryfall.io/png/front/3/7/37155f69-1d72-4fcb-80b3-548b7d78f9ec.png?1744499389",
+    "art_crop": "https://cards.scryfall.io/art_crop/front/3/7/37155f69-1d72-4fcb-80b3-548b7d78f9ec.jpg?1744499389",
+    "border_crop": "https://cards.scryfall.io/border_crop/front/3/7/37155f69-1d72-4fcb-80b3-548b7d78f9ec.jpg?1744499389"
+  },
+  "mana_cost": "{4}{G}",
+  "cmc": 5.0,
+  "type_line": "Sorcery",
+  "oracle_text": "Choose one. If you control a commander as you cast this spell, you may choose both instead.\n\u2022 Target player mills three cards. Return all land cards from your graveyard to the battlefield tapped.\n\u2022 Put X +1/+1 counters on target creature, where X is the number of lands you control. It gains trample until end of turn.",
+  "colors": [
+    "G"
+  ],
+  "color_identity": [
+    "G"
+  ],
+  "keywords": [
+    "Mill"
+  ],
+  "legalities": {
+    "standard": "not_legal",
+    "future": "not_legal",
+    "historic": "not_legal",
+    "timeless": "not_legal",
+    "gladiator": "not_legal",
+    "pioneer": "not_legal",
+    "explorer": "not_legal",
+    "modern": "not_legal",
+    "legacy": "legal",
+    "pauper": "not_legal",
+    "vintage": "legal",
+    "penny": "not_legal",
+    "commander": "legal",
+    "oathbreaker": "legal",
+    "standardbrawl": "not_legal",
+    "brawl": "not_legal",
+    "alchemy": "not_legal",
+    "paupercommander": "not_legal",
+    "duel": "legal",
+    "oldschool": "not_legal",
+    "premodern": "not_legal",
+    "predh": "not_legal"
+  },
+  "games": [
+    "paper",
+    "mtgo"
+  ],
+  "reserved": false,
+  "game_changer": false,
+  "foil": false,
+  "nonfoil": true,
+  "finishes": [
+    "nonfoil"
+  ],
+  "oversized": false,
+  "promo": false,
+  "reprint": false,
+  "variation": false,
+  "set_id": "bca9779c-0a0b-4ac1-8794-f3fc25549cf4",
+  "set": "tdc",
+  "set_name": "Tarkir: Dragonstorm Commander",
+  "set_type": "commander",
+  "set_uri": "https://api.scryfall.com/sets/bca9779c-0a0b-4ac1-8794-f3fc25549cf4",
+  "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Atdc&unique=prints",
+  "scryfall_set_uri": "https://scryfall.com/sets/tdc?utm_source=api",
+  "rulings_uri": "https://api.scryfall.com/cards/37155f69-1d72-4fcb-80b3-548b7d78f9ec/rulings",
+  "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3A951a0e34-e610-477f-b441-6680df55a29b&unique=prints",
+  "collector_number": "49",
+  "digital": false,
+  "rarity": "rare",
+  "watermark": "sultai",
+  "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
+  "artist": "Cristi Balanescu",
+  "artist_ids": [
+    "c09ede88-a1b5-4a18-9895-dc8a965d28a5"
+  ],
+  "illustration_id": "0a6d9e6a-bcd8-40ba-bcf3-3c777a0a6322",
+  "border_color": "black",
+  "frame": "2015",
+  "security_stamp": "oval",
+  "full_art": false,
+  "textless": false,
+  "booster": false,
+  "story_spotlight": false,
+  "edhrec_rank": 10390,
+  "prices": {
+    "usd": "1.55",
+    "usd_foil": null,
+    "usd_etched": null,
+    "eur": "0.86",
+    "eur_foil": null,
+    "tix": "1.48"
+  },
+  "related_uris": {
+    "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=695978&printed=false",
+    "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Darticle%26game%3Dmagic%26q%3DWill%2Bof%2Bthe%2BSultai",
+    "tcgplayer_infinite_decks": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Ddeck%26game%3Dmagic%26q%3DWill%2Bof%2Bthe%2BSultai",
+    "edhrec": "https://edhrec.com/route/?cc=Will+of+the+Sultai"
+  },
+  "purchase_uris": {
+    "tcgplayer": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F624480%3Fpage%3D1",
+    "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Singles/Commander-Tarkir-Dragonstorm/Will-of-the-Sultai?referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+    "cardhoarder": "https://www.cardhoarder.com/cards/138115?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall"
+  }
+}

@@ -1,0 +1,27 @@
+🔧 Logging to: ./logs\log_20250415_224416.txt
+
+📥 Fetching EDHREC Data:   0%|[36m                                                                  [0m| 0/17 [00:00<?, ?it/s][0m⏩ Using cached EDHREC data for 'kokusho the evening star'
+⏩ Using cached EDHREC data for 'tiamat'
+⏩ Using cached EDHREC data for 'Atsushi, the Blazing Sky'
+⏩ Using cached EDHREC data for 'kairi the swirling sky'
+⏩ Using cached EDHREC data for 'ryusei the falling star'
+⏩ Using cached EDHREC data for 'colossal grave-reaver'
+⏩ Using cached EDHREC data for 'keiga the tide star'
+⏩ Using cached EDHREC data for 'jugan the rising star'
+⏩ Using cached EDHREC data for 'junji the midnight sky'
+⏩ Using cached EDHREC data for 'ancient brass dragon'
+⏩ Using cached EDHREC data for 'teval the balanced scale'
+⏩ Using cached EDHREC data for 'kura the boundless sky'
+⏩ Using cached EDHREC data for 'kyodai soul of kamigawa'
+⏩ Using cached EDHREC data for 'ao the dawn sky'
+⚠️  Failed to fetch data for 'rivaz of the clas'
+📥 Fetching EDHREC Data:  88%|[36m##################################################2      [0m| 15/17 [00:00<00:00, 59.53it/s][0m⏩ Using cached EDHREC data for 'yosei the morning star'
+⏩ Using cached EDHREC data for 'ebondeath dracolich'
+📥 Fetching EDHREC Data: 100%|[36m#########################################################[0m| 17/17 [00:00<00:00, 67.22it/s][0m
+🔀 Combining CSVs:   0%|[35m                                                                        [0m| 0/16 [00:00<?, ?it/s][0m🔀 Combining CSVs: 100%|[35m############################################################[0m| 16/16 [00:00<00:00, 11656.92it/s][0m
+✨ Enriching with Scryfall:   0%|[32m                                                              [0m| 0/278 [00:00<?, ?it/s][0m❌ Failed to fetch: Henzie "Toolbox" Torre
+✨ Enriching with Scryfall:   0%|[32m1                                                     [0m| 1/278 [00:00<00:41,  6.68it/s][0m❌ Failed to fetch: Skanos Dragonheart // Acolyte of Bahamut
+✨ Enriching with Scryfall:   3%|[32m#5                                                    [0m| 8/278 [00:00<00:07, 35.10it/s][0m✨ Enriching with Scryfall:  12%|[32m#####9                                              [0m| 32/278 [00:00<00:02, 114.70it/s][0m❌ Failed to fetch: Renari, Merchant of Marvels // Acolyte of Bahamut
+✨ Enriching with Scryfall:  16%|[32m########5                                            [0m| 45/278 [00:00<00:02, 89.91it/s][0m✨ Enriching with Scryfall:  24%|[32m############3                                       [0m| 66/278 [00:00<00:01, 121.05it/s][0m❌ Failed to fetch: Keleth, Sunmane Familiar // Yoshimaru, Ever Faithful
+✨ Enriching with Scryfall:  29%|[32m##############9                                     [0m| 80/278 [00:00<00:01, 110.89it/s][0m✨ Enriching with Scryfall:  41%|[32m####################9                              [0m| 114/278 [00:00<00:00, 169.42it/s][0m✨ Enriching with Scryfall:  53%|[32m##########################9                        [0m| 147/278 [00:01<00:00, 212.35it/s][0m✨ Enriching with Scryfall:  62%|[32m###############################3                   [0m| 171/278 [00:01<00:00, 178.24it/s][0m✨ Enriching with Scryfall:  69%|[32m###################################2               [0m| 192/278 [00:01<00:00, 165.40it/s][0m✨ Enriching with Scryfall:  76%|[32m######################################7            [0m| 211/278 [00:01<00:00, 164.74it/s][0m✨ Enriching with Scryfall:  82%|[32m##########################################         [0m| 229/278 [00:01<00:00, 129.26it/s][0m✨ Enriching with Scryfall:  88%|[32m############################################7      [0m| 244/278 [00:01<00:00, 123.75it/s][0m✨ Enriching with Scryfall:  93%|[32m################################################2   [0m| 258/278 [00:02<00:00, 99.57it/s][0m✨ Enriching with Scryfall:  97%|[32m##################################################5 [0m| 270/278 [00:02<00:00, 81.04it/s][0m✨ Enriching with Scryfall: 100%|[32m###################################################[0m| 278/278 [00:02<00:00, 113.89it/s][0m
+[32m✅ Output saved to: scryfall_output.csv

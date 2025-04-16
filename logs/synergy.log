@@ -1,0 +1,2 @@
+[LOGGING] Console output will also be written to: ./logs/synergy.log
+Usage: python analyze_mana_colors.py <card_list.txt> <landcount>

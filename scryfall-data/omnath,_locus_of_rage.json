@@ -1,0 +1,150 @@
+{
+  "object": "card",
+  "id": "9a0a9d3f-cd75-419b-840f-88b468f71f4a",
+  "oracle_id": "1816eede-c5bd-49df-958f-a3af64cb2932",
+  "multiverse_ids": [
+    658680
+  ],
+  "mtgo_id": 124935,
+  "tcgplayer_id": 545069,
+  "cardmarket_id": 764820,
+  "name": "Omnath, Locus of Rage",
+  "lang": "en",
+  "released_at": "2024-04-19",
+  "uri": "https://api.scryfall.com/cards/9a0a9d3f-cd75-419b-840f-88b468f71f4a",
+  "scryfall_uri": "https://scryfall.com/card/otc/236/omnath-locus-of-rage?utm_source=api",
+  "layout": "normal",
+  "highres_image": true,
+  "image_status": "highres_scan",
+  "image_uris": {
+    "small": "https://cards.scryfall.io/small/front/9/a/9a0a9d3f-cd75-419b-840f-88b468f71f4a.jpg?1712354757",
+    "normal": "https://cards.scryfall.io/normal/front/9/a/9a0a9d3f-cd75-419b-840f-88b468f71f4a.jpg?1712354757",
+    "large": "https://cards.scryfall.io/large/front/9/a/9a0a9d3f-cd75-419b-840f-88b468f71f4a.jpg?1712354757",
+    "png": "https://cards.scryfall.io/png/front/9/a/9a0a9d3f-cd75-419b-840f-88b468f71f4a.png?1712354757",
+    "art_crop": "https://cards.scryfall.io/art_crop/front/9/a/9a0a9d3f-cd75-419b-840f-88b468f71f4a.jpg?1712354757",
+    "border_crop": "https://cards.scryfall.io/border_crop/front/9/a/9a0a9d3f-cd75-419b-840f-88b468f71f4a.jpg?1712354757"
+  },
+  "mana_cost": "{3}{R}{R}{G}{G}",
+  "cmc": 7.0,
+  "type_line": "Legendary Creature \u2014 Elemental",
+  "oracle_text": "Landfall \u2014 Whenever a land you control enters, create a 5/5 red and green Elemental creature token.\nWhenever Omnath or another Elemental you control dies, Omnath deals 3 damage to any target.",
+  "power": "5",
+  "toughness": "5",
+  "colors": [
+    "G",
+    "R"
+  ],
+  "color_identity": [
+    "G",
+    "R"
+  ],
+  "keywords": [
+    "Landfall"
+  ],
+  "all_parts": [
+    {
+      "object": "related_card",
+      "id": "9a0a9d3f-cd75-419b-840f-88b468f71f4a",
+      "component": "combo_piece",
+      "name": "Omnath, Locus of Rage",
+      "type_line": "Legendary Creature \u2014 Elemental",
+      "uri": "https://api.scryfall.com/cards/9a0a9d3f-cd75-419b-840f-88b468f71f4a"
+    },
+    {
+      "object": "related_card",
+      "id": "448c05fc-8327-4c2a-aec2-fa08e297002d",
+      "component": "token",
+      "name": "Elemental",
+      "type_line": "Token Creature \u2014 Elemental",
+      "uri": "https://api.scryfall.com/cards/448c05fc-8327-4c2a-aec2-fa08e297002d"
+    }
+  ],
+  "legalities": {
+    "standard": "not_legal",
+    "future": "not_legal",
+    "historic": "legal",
+    "timeless": "legal",
+    "gladiator": "legal",
+    "pioneer": "legal",
+    "explorer": "legal",
+    "modern": "legal",
+    "legacy": "legal",
+    "pauper": "not_legal",
+    "vintage": "legal",
+    "penny": "legal",
+    "commander": "legal",
+    "oathbreaker": "legal",
+    "standardbrawl": "not_legal",
+    "brawl": "legal",
+    "alchemy": "not_legal",
+    "paupercommander": "not_legal",
+    "duel": "legal",
+    "oldschool": "not_legal",
+    "premodern": "not_legal",
+    "predh": "not_legal"
+  },
+  "games": [
+    "paper",
+    "mtgo"
+  ],
+  "reserved": false,
+  "game_changer": false,
+  "foil": false,
+  "nonfoil": true,
+  "finishes": [
+    "nonfoil"
+  ],
+  "oversized": false,
+  "promo": false,
+  "reprint": true,
+  "variation": false,
+  "set_id": "d6548798-0c10-4509-b71a-2d8b1d14665a",
+  "set": "otc",
+  "set_name": "Outlaws of Thunder Junction Commander",
+  "set_type": "commander",
+  "set_uri": "https://api.scryfall.com/sets/d6548798-0c10-4509-b71a-2d8b1d14665a",
+  "set_search_uri": "https://api.scryfall.com/cards/search?order=set&q=e%3Aotc&unique=prints",
+  "scryfall_set_uri": "https://scryfall.com/sets/otc?utm_source=api",
+  "rulings_uri": "https://api.scryfall.com/cards/9a0a9d3f-cd75-419b-840f-88b468f71f4a/rulings",
+  "prints_search_uri": "https://api.scryfall.com/cards/search?order=released&q=oracleid%3A1816eede-c5bd-49df-958f-a3af64cb2932&unique=prints",
+  "collector_number": "236",
+  "digital": false,
+  "rarity": "mythic",
+  "card_back_id": "0aeebaf5-8c7d-4636-9e82-8c27447861f7",
+  "artist": "Brad Rigney",
+  "artist_ids": [
+    "f17194b9-10e9-44ea-9b65-6812ab398624"
+  ],
+  "illustration_id": "eff013ca-b457-4fc9-a840-244e6f71c967",
+  "border_color": "black",
+  "frame": "2015",
+  "frame_effects": [
+    "legendary"
+  ],
+  "security_stamp": "oval",
+  "full_art": false,
+  "textless": false,
+  "booster": false,
+  "story_spotlight": false,
+  "edhrec_rank": 1368,
+  "penny_rank": 4639,
+  "prices": {
+    "usd": "1.42",
+    "usd_foil": null,
+    "usd_etched": null,
+    "eur": "0.82",
+    "eur_foil": null,
+    "tix": "0.25"
+  },
+  "related_uris": {
+    "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=658680&printed=false",
+    "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Darticle%26game%3Dmagic%26q%3DOmnath%252C%2BLocus%2Bof%2BRage",
+    "tcgplayer_infinite_decks": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=infinite&u=https%3A%2F%2Finfinite.tcgplayer.com%2Fsearch%3FcontentMode%3Ddeck%26game%3Dmagic%26q%3DOmnath%252C%2BLocus%2Bof%2BRage",
+    "edhrec": "https://edhrec.com/route/?cc=Omnath%2C+Locus+of+Rage"
+  },
+  "purchase_uris": {
+    "tcgplayer": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&u=https%3A%2F%2Fwww.tcgplayer.com%2Fproduct%2F545069%3Fpage%3D1",
+    "cardmarket": "https://www.cardmarket.com/en/Magic/Products/Singles/Commander-Outlaws-of-Thunder-Junction/Omnath-Locus-of-Rage?referrer=scryfall&utm_campaign=card_prices&utm_medium=text&utm_source=scryfall",
+    "cardhoarder": "https://www.cardhoarder.com/cards/124935?affiliate_id=scryfall&ref=card-profile&utm_campaign=affiliate&utm_medium=card&utm_source=scryfall"
+  }
+}
