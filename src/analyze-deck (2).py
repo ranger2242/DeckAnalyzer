@@ -7,11 +7,6 @@ import requests
 from collections import defaultdict
 from tqdm import tqdm
 from colorama import Fore, init, Style
-import random
-from collections import Counter
-from datetime import datetime
-import re
-
 init(autoreset=True)
 
 def safe_card_filename(card_name):
@@ -41,111 +36,6 @@ def load_or_fetch_card(card_name, cache_dir="./scryfall-data"):
     except:
         print(f"❌ Failed to fetch: {card_name}")
         return None
-
-loaded_card_data ={}
-
-def simulate_opening_hands(card_names, iterations=10000):
-    global loaded_card_data
-    print("\n[SIMULATING] Fetching card types, CMCs, and colors...")
-    land_cards = set()
-    cmc_lookup = {}
-    color_lookup = {}
-    produces_lookup = {}
-
-    deck = []
-
-    for name in tqdm(card_names, desc="Classifying Cards", colour="green"):
-        data = load_or_fetch_card(name)
-        loaded_card_data[name] = data;
-        if not data:
-            continue
-        type_line = data.get("type_line", "").lower()
-        cmc = int(data.get("cmc", 0))
-        colors = data.get("colors", [])
-        produced = data.get("produced_mana", []) if "land" in type_line else []
-
-        if "land" in type_line:
-            land_cards.add(name)
-
-        cmc_lookup[name] = cmc
-        color_lookup[name] = colors
-        produces_lookup[name] = produced
-        deck.append(name)
-
-    if len(deck) < 7:
-        print("Deck is too small for simulation.")
-        return
-
-    land_draws = Counter()
-    cmc_stats = {"CMC1+": 0, "CMC2+": 0, "CMC3+": 0}
-
-    color_stats = {
-        c: {"producer_hits": [], "cmc_vals": []}
-        for c in ["W", "U", "B", "R", "G"]
-    }
-
-    for _ in range(iterations):
-        hand = random.sample(deck, 7)
-        land_count = sum(1 for card in hand if card in land_cards)
-        land_draws[land_count] += 1
-
-        cmcs = [cmc_lookup.get(card, 0) for card in hand]
-        if any(c == 1 for c in cmcs): cmc_stats["CMC1+"] += 1
-        if any(c <= 2 and c>=1 for c in cmcs): cmc_stats["CMC2+"] += 1
-        if any(c <= 3 and c>=1 for c in cmcs): cmc_stats["CMC3+"] += 1
-
-        # For each color, count producers and CMC values that use that color
-        for color in color_stats.keys():
-            producer_count = sum(1 for card in hand if color in produces_lookup.get(card, []))
-            cmc_values = [cmc_lookup[card] for card in hand if color in color_lookup.get(card, [])]
-            color_stats[color]["producer_hits"].append(producer_count / 7 * 100)
-            if cmc_values:
-                avg = sum(cmc_values) / len(cmc_values)
-                color_stats[color]["cmc_vals"].append(avg)
-
-    # Print land draw summary
-    print("\nOpening Hand Land Distribution ({} iterations):".format(iterations))
-    print("-" * 40)
-    print(f"{'Lands Drawn':<15} | {'% of Hands':>10}")
-    print("-" * 40)
-    for i in range(8):
-        pct = (land_draws[i] / iterations) * 100
-        print(f"{i:<15} | {pct:>10.2f}%")
-    print("-" * 40)
-
-    # Print low-CMC stats
-    print("\nPresence of Low-CMC Cards in Opening Hands:")
-    print("-" * 40)
-    print(f"{'Criteria':<10} | {'# Hands':>8} | {'%':>8}")
-    print("-" * 40)
-    for key in ["CMC1+", "CMC2+", "CMC3+"]:
-        count = cmc_stats[key]
-        pct = (count / iterations) * 100
-        print(f"{key:<10} | {count:>8} | {pct:>7.2f}%")
-    print("-" * 40)
-
-    # Print color stats
-    print("\nColor Production and Usage Summary (Avg per Opening Hand):")
-    print("-" * 80)
-    print(f"{'Color':<6} | {'Avg % Producers':>18} | {'Avg CMC (Users)':>20} | {'Avg Count (Cost)':>20}")
-    print("-" * 80)
-    for color in ["W", "U", "B", "R", "G"]:
-        producer_avg = sum(color_stats[color]["producer_hits"]) / iterations
-        cmc_vals = color_stats[color]["cmc_vals"]
-        cmc_avg = sum(cmc_vals) / len(cmc_vals) if cmc_vals else 0
-
-        # Calculate average number of cards in hand that use this color in cost
-        color_cost_total = 0
-        for _ in range(iterations):
-            hand = random.sample(deck, 7)
-            color_cost_total += sum(1 for card in hand if color in color_lookup.get(card, []))
-        avg_color_cost_count = color_cost_total / iterations
-
-        print(f"{color:<6} | {producer_avg:>18.2f}% | {cmc_avg:>20.2f} | {avg_color_cost_count:>20.2f}")
-    print("-" * 80)
-
-
-
 
 def analyze_mana_distribution(card_names, landcount):
     color_count = defaultdict(int)
@@ -444,8 +334,10 @@ def read_card_list(path):
 
 
 # ========== LOG OUTPUT TO FILE ==========
+from datetime import datetime
 
 
+import re
 class TeeLogger:
     def __init__(self, filepath):
         self.terminal = sys.__stdout__
@@ -479,4 +371,3 @@ if __name__ == "__main__":
         sys.exit(1)
 
     analyze_mana_distribution(card_list, landcount)
-    simulate_opening_hands(card_list)
