@@ -44,6 +44,19 @@ def load_or_fetch_card(card_name, cache_dir="./scryfall-data"):
 
 loaded_card_data ={}
 
+def format_mana_cost(mana_cost, color_map):
+    formatted = ""
+    pattern = re.compile(r'\{(.*?)\}')
+    symbols = pattern.findall(mana_cost.upper())
+    for sym in symbols:
+        for c in ["W", "U", "B", "R", "G", "C"]:
+            if c in sym:
+                formatted += f"{Fore.RESET}({color_map[c]})"
+                break
+        else:
+            formatted += f"({sym})"
+    return formatted
+
 def simulate_opening_hands(card_names, iterations=10000):
     global loaded_card_data
     print("\n[SIMULATING] Fetching card types, CMCs, and colors...")
@@ -103,46 +116,61 @@ def simulate_opening_hands(card_names, iterations=10000):
                 avg = sum(cmc_values) / len(cmc_values)
                 color_stats[color]["cmc_vals"].append(avg)
 
-    # Print land draw summary
-    print("\nOpening Hand Land Distribution ({} iterations):".format(iterations))
-    print("-" * 40)
-    print(f"{'Lands Drawn':<15} | {'% of Hands':>10}")
-    print("-" * 40)
-    for i in range(8):
-        pct = (land_draws[i] / iterations) * 100
-        print(f"{i:<15} | {pct:>10.2f}%")
-    print("-" * 40)
+    print("\nCombined Opening Hand Simulation Summary (One Table):")
+    print("=" * 132)
+    print(f"{'Lands':<5} | {'% Hands':>8} |===| "
+          f"{'CMC Tier':<7} | {'# Hands':>8} | {'%':>6} |===| "
+          f"{'Color':<5} | {'% Producers':>12} | {'Avg CMC':>9} | {'Avg Count':>10}")
+    print("-" * 132)
 
-    # Print low-CMC stats
-    print("\nPresence of Low-CMC Cards in Opening Hands:")
-    print("-" * 40)
-    print(f"{'Criteria':<10} | {'# Hands':>8} | {'%':>8}")
-    print("-" * 40)
-    for key in ["CMC1+", "CMC2+", "CMC3+"]:
-        count = cmc_stats[key]
-        pct = (count / iterations) * 100
-        print(f"{key:<10} | {count:>8} | {pct:>7.2f}%")
-    print("-" * 40)
+    land_keys = list(range(8))
+    cmc_keys = list(cmc_stats.keys())
+    colors = ["W", "U", "B", "R", "G"]
+    rows = max(len(land_keys), len(cmc_keys), len(colors))
 
-    # Print color stats
-    print("\nColor Production and Usage Summary (Avg per Opening Hand):")
-    print("-" * 80)
-    print(f"{'Color':<6} | {'Avg % Producers':>18} | {'Avg CMC (Users)':>20} | {'Avg Count (Cost)':>20}")
-    print("-" * 80)
-    for color in ["W", "U", "B", "R", "G"]:
-        producer_avg = sum(color_stats[color]["producer_hits"]) / iterations
-        cmc_vals = color_stats[color]["cmc_vals"]
-        cmc_avg = sum(cmc_vals) / len(cmc_vals) if cmc_vals else 0
+    for i in range(rows):
+        # LAND STATS
+        if i < len(land_keys):
+            land_str = f"{land_keys[i]}"
+            land_pct = f"{(land_draws[land_keys[i]] / iterations * 100):>7.2f}%"
+        else:
+            land_str = ""
+            land_pct = ""
 
-        # Calculate average number of cards in hand that use this color in cost
-        color_cost_total = 0
-        for _ in range(iterations):
-            hand = random.sample(deck, 7)
-            color_cost_total += sum(1 for card in hand if color in color_lookup.get(card, []))
-        avg_color_cost_count = color_cost_total / iterations
+        # CMC STATS
+        if i < len(cmc_keys):
+            cmc_label = cmc_keys[i]
+            val = cmc_stats[cmc_label]
+            cmc_val = f"{val:>8}"
+            cmc_pct = f"{(val / iterations * 100):>5.2f}%"
+        else:
+            cmc_label, cmc_val, cmc_pct = "", "", ""
 
-        print(f"{color:<6} | {producer_avg:>18.2f}% | {cmc_avg:>20.2f} | {avg_color_cost_count:>20.2f}")
-    print("-" * 80)
+        # COLOR STATS
+        if i < len(colors):
+            c = colors[i]
+            color = c
+            pprod = f"{sum(color_stats[c]['producer_hits']) / iterations:>11.2f}%"
+            if color_stats[c]["cmc_vals"]:
+                avg_cmc = f"{sum(color_stats[c]['cmc_vals']) / len(color_stats[c]['cmc_vals']):>8.2f}"
+            else:
+                avg_cmc = " " * 8
+            color_cost_total = sum(
+                sum(1 for card in random.sample(deck, 7) if c in color_lookup.get(card, []))
+                for _ in range(iterations)
+            )
+            avg_count = f"{color_cost_total / iterations:>9.2f}"
+        else:
+            color, pprod, avg_cmc, avg_count = "", "", "", ""
+
+        print(f"{land_str:<5} | {land_pct:>8} |===| "
+              f"{cmc_label:<7} | {cmc_val:>8} | {cmc_pct:>6} |===| "
+              f"{color:<5} | {pprod:>12} | {avg_cmc:>9} | {avg_count:>10}")
+
+    print("=" * 132)
+
+
+
 
 
 
@@ -316,6 +344,10 @@ def analyze_mana_distribution(card_names, landcount):
 
     def truncate(s, maxlen=30):
         return s if len(s) <= maxlen else s[:27] + "..."
+    
+    def pad_ansi_right(s, width):
+        padding = width - visible_len(s)
+        return ' ' * max(0, padding) + s
 
     def format_symbols(produced_list):
         ordered = ['W', 'U', 'B', 'R', 'G', 'C']
@@ -361,6 +393,26 @@ def analyze_mana_distribution(card_names, landcount):
 
     print(Fore.YELLOW + "\nCard Category Table (All Cards):" + Style.RESET_ALL)
 
+    # Preprocess formatted costs
+    formatted_costs = {}
+    max_cost_len = 0
+    for raw_name in card_names:
+        data = load_or_fetch_card(raw_name)
+        if not data:
+            continue
+        raw = data.get("mana_cost", "")
+        fmt = format_mana_cost(raw, {
+            "W": Fore.WHITE + "W" + Style.RESET_ALL,
+            "U": Fore.BLUE + "U" + Style.RESET_ALL,
+            "B": Fore.LIGHTBLACK_EX + "B" + Style.RESET_ALL,
+            "R": Fore.RED + "R" + Style.RESET_ALL,
+            "G": Fore.GREEN + "G" + Style.RESET_ALL,
+            "C": Fore.LIGHTWHITE_EX + "C" + Style.RESET_ALL,
+        })
+        formatted_costs[raw_name] = fmt
+        max_cost_len = max(max_cost_len, visible_len(fmt))
+
+    # Adjust headers
     categories = {
         "Damage": set(damage_cards),
         "Removal": set(removal_cards),
@@ -369,24 +421,23 @@ def analyze_mana_distribution(card_names, landcount):
         "Mill": set(mill_cards),
         "Search": set(search_cards),
         "Heal": set(heal_cards),
-        "Info": set(scry_cards),
         "Combo": set(combo_cards),
         "Tokens": set(token_cards),
         "Graveyard": set(graveyard_cards),
     }
+    headers = ["Name", "Cost", "Type"] + list(categories.keys())
+    col_widths = [30, max_cost_len, 12] + [10] * len(categories)
 
-    # Lookup for type and cmc
-    type_lookup = {name: t.capitalize() for t, names in type_cards.items() for name in names}
-    cmc_lookup = dict(cmc_list)
-
-    headers = ["Name", "Type", "CMC"] + list(categories.keys())
-    col_widths = [30, 12, 5] + [10] * len(categories)
+    # Header
     header_row = " | ".join(f"{h:<{w}}" for h, w in zip(headers, col_widths))
     print("-" * len(header_row))
     print(header_row)
     print("-" * len(header_row))
 
-    category_counts = {k: 0 for k in categories}  # initialize category hit counters
+    # Card data
+    type_lookup = {name: t.capitalize() for t, names in type_cards.items() for name in names}
+    cmc_lookup = dict(cmc_list)
+    category_counts = {k: 0 for k in categories}
 
     for raw_name in sorted(card_names):
         data = load_or_fetch_card(raw_name)
@@ -394,25 +445,20 @@ def analyze_mana_distribution(card_names, landcount):
             continue
         name = data.get("name", raw_name)
         typ = type_lookup.get(name, "")
-        cmc = int(cmc_lookup.get(name, 0))
-        row = [
-            f"{name:<30}",
-            f"{typ:<12}",
-            f"{cmc:<5}"
-        ]
-        for i, cat in enumerate(categories.values()):
-            if name in cat:
+        cost_fmt = pad_ansi_right(formatted_costs.get(raw_name, ""), max_cost_len)
+        row = [f"{name:<30}", f"{cost_fmt}", f"{typ:<12}"]
+
+        for key in categories:
+            if name in categories[key]:
                 row.append("✓".ljust(10))
-                category_key = list(categories.keys())[i]
-                category_counts[category_key] += 1
+                category_counts[key] += 1
             else:
                 row.append(" ".ljust(10))
         print(" | ".join(row))
 
+    # Summary
     print("-" * len(header_row))
-
-    # Summary total row
-    total_row = ["Total".ljust(30), "".ljust(12), "".ljust(5)]
+    total_row = ["Total".ljust(30), "".ljust(max_cost_len), "".ljust(12)]
     for key in categories:
         total_row.append(str(category_counts[key]).ljust(10))
     print(" | ".join(total_row))
@@ -425,6 +471,19 @@ def analyze_mana_distribution(card_names, landcount):
             cmc = next((c for n, c in cmc_list if n == name), 0)
             all_typed.append((name, t.capitalize(), cmc))
     total_cards = len(all_typed)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     print(Fore.YELLOW + "CMC Distribution:" + Style.RESET_ALL)
 

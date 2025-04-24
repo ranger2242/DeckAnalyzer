@@ -1,0 +1,5 @@
+generate a list of tokens that are created by the input list
+add card count 
+add count of basic lands
+print all card names formatted
+add deck price total

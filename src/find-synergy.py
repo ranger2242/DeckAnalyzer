@@ -1,80 +1,54 @@
 
 import os
 import sys
-import csv
 import json
+import csv
 import re
 import time
 import requests
-from glob import glob
+import pandas as pd
 from collections import defaultdict
-from pandas import DataFrame
 from tqdm import tqdm
-from colorama import init, Fore, Style
-init(autoreset=True)
+import logging
+import math
 
+def safe_card_filename(card_name):
+    return card_name.lower().replace(" ", "_").replace("/", "-")
 
-
-import sys
-import os
-from datetime import datetime
-
-# Setup logging
-log_folder = "./logs"
-os.makedirs(log_folder, exist_ok=True)
-log_path = os.path.join(log_folder, f"log_20250416_032315.txt")
-sys.stdout = open(log_path, "w")
-sys.stderr = sys.stdout
-print(f"🔧 Logging to: {log_path}\n")
-
-import sys
-import os
-from datetime import datetime
-
-class DualLogger:
-    def __init__(self, filepath, mode="w", encoding="utf-8"):
-        self.terminal = sys.__stdout__
-        self.log = open(filepath, mode, encoding=encoding, buffering=1)
-    def write(self, message):
-        self.terminal.write(message)
-        self.log.write(message)
-    def flush(self):
-        self.terminal.flush()
-        self.log.flush()
-
-# Setup logging with both console + file output
-log_folder = "./logs"
-os.makedirs(log_folder, exist_ok=True)
-log_path = os.path.join(log_folder, f"log_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt")
-sys.stdout = sys.stderr = DualLogger(log_path)
-print(f"🔧 Logging to: {log_path}\n")
-# ========== 1-get-edhrec-card-data.py ==========
 def format_card_name(name):
     name = name.lower()
     name = re.sub(r"[^\w\s-]", "", name)
     return name.replace(" ", "-")
 
-def fetch_synergy_data(card_name):
-    formatted_name = format_card_name(card_name)
-    folder = "./edhrec-card-data"
+def fetch_scryfall(card_name, cache_dir="./scryfall-data"):
+    os.makedirs(cache_dir, exist_ok=True)
+    safe_name = safe_card_filename(card_name)
+    filepath = os.path.join(cache_dir, f"{safe_name}.json")
+    if os.path.exists(filepath):
+        return
+    url = f"https://api.scryfall.com/cards/named?exact={card_name}"
+    try:
+        response = requests.get(url)
+        response.raise_for_status()
+        with open(filepath, "w", encoding="utf-8") as f:
+            json.dump(response.json(), f, indent=2)
+        time.sleep(0.1)
+    except:
+        print(f"❌ Failed to fetch from Scryfall for {card_name}")
+
+def fetch_edhrec(card_name, folder="./edhrec-card-data"):
     os.makedirs(folder, exist_ok=True)
-    filename = f"{folder}/{formatted_name}_synergy.csv"
-    
-    if os.path.exists(filename):
-        file_time = datetime.fromtimestamp(os.path.getmtime(filename))
-        if datetime.now() - file_time < timedelta(weeks=1):
-            print(f"⏩ Using cached EDHREC data for '{card_name}'")
-            return None, formatted_name
-
-    url = f"https://json.edhrec.com/pages/cards/{formatted_name}.json"
-    synergy_data = []
-
+    formatted = format_card_name(card_name)
+    path = os.path.join(folder, f"{formatted}_synergy.csv")
+    if os.path.exists(path):
+        return
+    url = f"https://json.edhrec.com/pages/cards/{formatted}.json"
     try:
         response = requests.get(url)
         response.raise_for_status()
         data = response.json()
         cardlists = data.get("container", {}).get("json_dict", {}).get("cardlists", [])
-
+        synergy_cards = []
         for section in cardlists:
             for card in section.get("cardviews", []):
                 name = card.get("name")
@@ -82,200 +56,245 @@ def fetch_synergy_data(card_name):
                 match = re.search(r"([+-]?\d+)%", label)
                 if name and match:
                     synergy = int(match.group(1))
-                    synergy_data.append((name, synergy))
+                    synergy_cards.append((name, synergy))
+        with open(path, "w", newline="", encoding="utf-8") as f:
+            writer = csv.writer(f)
+            writer.writerow(["card name", "synergy %"])
+            for name, synergy in synergy_cards:
+                writer.writerow([name, synergy])
+    except:
+        print(f"⚠️ Could not fetch EDHREC for {card_name}")
 
-    except requests.exceptions.RequestException:
-        print(f"⚠️  Failed to fetch data for '{card_name}'")
 
-    return synergy_data, formatted_name
+def fetch_commander_data(card_name, folder="./edhrec-commander-data"):
+    os.makedirs(folder, exist_ok=True)
+    formatted = format_card_name(card_name)
+    path = os.path.join(folder, f"{formatted}_commander.json")
+    if os.path.exists(path):
+        with open(path, "r", encoding="utf-8") as f:
+            try:
+                return json.load(f)
+            except json.JSONDecodeError:
+                return None
+    url = f"https://json.edhrec.com/pages/commanders/{formatted}.json"
+    try:
+        response = requests.get(url)
+        response.raise_for_status()
+        data = response.json()
+        with open(path, "w", encoding="utf-8") as f:
+            json.dump(data, f, indent=2)
+        return data
+    except:
+        print(f"⚠️ Could not fetch EDHREC commander data for {card_name}")
+        return None
 
-def write_synergy_csv(card_name, synergy_data, formatted_name):
-    unique_cards = {}
-    for name, synergy in synergy_data:
-        if name not in unique_cards or synergy > unique_cards[name]:
-            unique_cards[name] = synergy
 
-    sorted_cards = sorted(unique_cards.items(), key=lambda x: x[1], reverse=True)
-    folder = "./edhrec-card-data"
-    if not os.path.exists(folder):
-        os.makedirs(folder)
-    filename = f"{folder}/{formatted_name}_synergy.csv"
-    with open(filename, "w", newline="", encoding="utf-8") as csvfile:
-        writer = csv.writer(csvfile)
-        writer.writerow(["card name", "synergy %"])
-        for name, synergy in sorted_cards:
-            writer.writerow([name, synergy])
-
-    print(Fore.GREEN + f"✅ Saved: {filename}")
-
-def edhrec_main(input_file):
-    with open(input_file, "r", encoding="utf-8") as f:
-        lines = f.readlines()
-        for line in tqdm(lines, desc='📥 Fetching EDHREC Data', colour='cyan'):
-            card_name = line.strip()
-            if card_name:
-                data, formatted = fetch_synergy_data(card_name)
-                if data:
-                    write_synergy_csv(card_name, data, formatted)
-
-# ========== 2-combine-synergy-list.py ==========
-def read_top_synergy(file_path, max_rows=50):
-    entries = []
-    with open(file_path, "r", encoding="utf-8") as f:
-        reader = csv.reader(f)
-        next(reader)
-        for i, row in enumerate(reader):
-            if i >= max_rows:
-                break
-            if len(row) >= 2:
-                name, synergy = row[0], row[1]
+def read_synergy_csv(formatted_name, folder="./edhrec-card-data"):
+    synergy_pairs = []
+    filepath = os.path.join(folder, f"{formatted_name}_synergy.csv")
+    if not os.path.exists(filepath):
+        return synergy_pairs
+    with open(filepath, "r", encoding="utf-8") as f:
+        next(f)
+        for line in f:
+            parts = line.strip().split(",")
+            if len(parts) >= 2:
                 try:
-                    synergy_val = int(synergy)
-                    entries.append((name, synergy_val))
+                    synergy = int(parts[1])
+                    if synergy > 0:
+                        synergy_pairs.append((parts[0], synergy))
                 except ValueError:
                     continue
-    return entries
+    return synergy_pairs
 
-def combine_csvs(folder_path):
-    all_entries = []
-
-    csv_files = glob(os.path.join(folder_path, "*.csv"))
-    if not csv_files:
-        print("❌ No CSV files found in that folder.")
-        return
-
-    for file in tqdm(csv_files, desc='🔀 Combining CSVs', colour='magenta'):
-        entries = read_top_synergy(file)
-        all_entries.extend(entries)
-
-    unique_entries = {}
-    for name, synergy in all_entries:
-        if name not in unique_entries or synergy > unique_entries[name]:
-            unique_entries[name] = synergy
-
-    sorted_entries = sorted(unique_entries.items(), key=lambda x: x[1], reverse=True)
-    folder = "./edhrec-card-data/combined"
-    if not os.path.exists(folder):
-        os.makedirs(folder)
-
-    output_file = f"{folder}/combined_top50_synergy.csv"
-    with open(output_file, "w", newline="", encoding="utf-8") as f:
-        writer = csv.writer(f)
-        writer.writerow(["card name", "synergy %"])
-        for name, synergy in sorted_entries:
-            writer.writerow([name, synergy])
-    return output_file
-
-# ========== 3-get-scryfall-card-data.py ==========
-def safe_card_filename(card_name):
-    return card_name.lower().replace(" ", "_").replace("/", "-")
-
-def load_or_fetch_card(card_name, cache_dir="./scryfall-data"):
-    os.makedirs(cache_dir, exist_ok=True)
+def load_scryfall_data(card_name, cache_dir="./scryfall-data"):
     safe_name = safe_card_filename(card_name)
     filepath = os.path.join(cache_dir, f"{safe_name}.json")
 
+    # Try loading cached file
     if os.path.exists(filepath):
         with open(filepath, "r", encoding="utf-8") as f:
             try:
                 return json.load(f)
             except json.JSONDecodeError:
-                print(f"⚠️ Skipping corrupt file: {filepath}")
-                return None
-
-    url = f"https://api.scryfall.com/cards/named?exact={card_name}"
-    try:
-        response = requests.get(url)
-        response.raise_for_status()
-        data = response.json()
-        with open(filepath, "w", encoding="utf-8") as f:
-            json.dump(data, f, indent=2)
-        time.sleep(0.1)
-        return data
-    except:
-        print(f"❌ Failed to fetch: {card_name}")
-        return None
-
-def get_power_tough(da, key):
-    try:
-        return int(da[key]) if key in da and da[key].isdigit() else 0
-    except:
-        return 0
-
-def enrich_with_scryfall(input_file):
-    synergy_map = defaultdict(list)
-    with open(input_file, "r", encoding="utf-8") as csvfile:
-    # Force synergy to 100% if card is on the input list
-        card_names_from_input = set(synergy_map.keys())
-
-        reader = csv.DictReader(csvfile)
-        for row in reader:
-            card_name = row.get("card name")
-            synergy = row.get("synergy %")
-            if card_name and synergy:
-                try:
-                    synergy_map[card_name].append(int(synergy))
-                except ValueError:
-                    continue
-
+                print(f"⚠️ Corrupt cache, re-fetching: {card_name}")
     
-    for name in card_names_from_input:
-        synergy_map[name] = [100]
+    # Fetch and retry if not found or corrupt
+    fetch_scryfall(card_name)
+    if os.path.exists(filepath):
+        with open(filepath, "r", encoding="utf-8") as f:
+            try:
+                return json.load(f)
+            except json.JSONDecodeError:
+                print(f"❌ Still corrupt after re-fetch: {card_name}")
+    return None
 
-    avg_synergy = {
-        name: sum(values) / len(values)
-        for name, values in synergy_map.items()
+def extract_value(data, key, default=""):
+    try:
+        return data.get(key, default)
+    except:
+        return default
+
+def get_power_tough(data, key):
+    val = data.get(key, "")
+    return val if isinstance(val, str) else str(val)
+
+
+def get_deck_color_identity(card_names):
+    identity_set = set()
+    for card in tqdm(card_names, desc="🔎 Fetching Scryfall + EDHREC data"):
+        data = load_scryfall_data(card)
+        if data:
+            identity_set.update(data.get("color_identity", []))
+    return identity_set
+
+def generate_enriched_synergy_data(card_list_path):
+    synergy_accumulator = defaultdict(list)
+    card_names = []
+
+    with open(card_list_path, "r", encoding="utf-8") as file:
+        
+    
+        logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
+        logging.info("📥 Loading deck and initializing filters...")
+
+        card_names = [line.strip() for line in file if line.strip()]
+        normalized_input = set(map(str.lower, map(str.strip, card_names)))
+        deck_colors = get_deck_color_identity(card_names)
+        # Gather all keywords from input cards
+        input_keywords = set()
+        for card in card_names:
+            scry = load_scryfall_data(card)
+            if scry:
+                input_keywords.update(scry.get("keywords", []))
+
+        for card in card_names:
+            fetch_scryfall(card)
+            fetch_edhrec(card)
+
+        ln = len(card_names)
+        for ind, card in enumerate(card_names):
+            percent = int((ind / ln) * 100)
+            print(card, " ", percent, "%")
+            formatted = format_card_name(card)
+
+            # Regular EDHREC synergy data
+            synergy_cards = read_synergy_csv(formatted)
+            for partner, score in synergy_cards:
+                synergy_accumulator[partner].append(score)
+
+            # If commander, add commander synergy
+            scry_data = load_scryfall_data(card)
+            if scry_data and "Legendary Creature" in scry_data.get("type_line", ""):
+                commander_data = fetch_commander_data(card)
+                if commander_data:
+                    cardlists = commander_data.get("container", {}).get("json_dict", {}).get("cardlists", [])
+                    for section in cardlists:
+                        for cmd_card in section.get("cardviews", []):
+                            name = cmd_card.get("name")
+                            label = cmd_card.get("label", "")
+                            match = re.search(r"([+-]?\d+)%", label)
+                            if name and match:
+                                synergy = int(match.group(1))
+                                synergy_accumulator[name].append(synergy)
+
+
+               # synergy_accumulator[partner].append(score)
+
+    weighted_scores = {
+        card: round(sum(scores) + len(scores) * 3, 2)
+        for card, scores in synergy_accumulator.items()
+        if card not in card_names
     }
 
-    entries = {}
-    for card_name in tqdm(avg_synergy, desc='✨ Enriching with Scryfall', colour='green'):
-        data = load_or_fetch_card(card_name)
-        if not data or "card_faces" in data:
+    
+    filtered_sorted = []
+    for card, synergy_score in weighted_scores.items():
+        if card.lower().strip() in normalized_input:
             continue
+        scry = load_scryfall_data(card)
+        if not scry:
+            print(f"❌ Missing Scryfall: {card}")
+            continue
+        if scry.get("color_identity") and not set(scry["color_identity"]).issubset(deck_colors):
+           # print(f"⚠️ Color identity mismatch: {card} => {scry.get('color_identity')} not in {deck_colors}")
+            continue
+        print(card," ", )
 
-        name = data["name"]
-        type_line = data["type_line"]
-        cmc = data.get("cmc", 0)
-        colors = data.get("colors", [])
-        produced = data.get("produced_mana", [])
-        power = get_power_tough(data, "power")
-        toughness = get_power_tough(data, "toughness")
-        keywords = data.get("keywords", [])
-        text = data.get("oracle_text", "")
-        legal = int(data.get("legalities", {}).get("commander", "") == "legal")
-        rank = data.get("edhrec_rank", 10000)
-        img = data.get("image_uris", {}).get("png", "")
-        art = data.get("image_uris", {}).get("art_crop", "")
-        url = data.get("purchase_uris", {}).get("tcgplayer", "")
-        prices = data.get("prices", {})
-        usd = prices.get("usd", "")
-        usd_foil = prices.get("usd_foil", "")
-        eur = prices.get("eur", "")
-        avg = round(avg_synergy[card_name], 2)
+        # Keyword weighting
+        card_keywords = set(scry.get("keywords", []))
+        keyword_overlap = len(input_keywords & card_keywords)
+        keyword_boost = keyword_overlap * 2
+        synergy_score += keyword_boost
 
-        entries[name] = [
-            name, type_line, cmc, colors, produced, power, toughness,
-            keywords, text, legal, rank, img, art, url, usd, usd_foil, eur, avg
-        ]
+        # CMC inverse weighting
+        type_line = scry.get("type_line", "")
+        if "Land" not in type_line:
+            cmc = scry.get("cmc", 0)
+            try:
+                cmc = float(cmc)
+                if cmc > 0:
+                    cmc_weight = 5 / cmc  # Adjust constant as needed
+                    synergy_score += cmc_weight
+            except:
+                pass
 
-    df = DataFrame(
-        list(entries.values()),
-        columns=[
-            "name", "type", "mana_cost", "colors", "produced_mana",
-            "power", "tough", "keywords", "text", "legal", "rank",
-            "png", "art", "url", "usd", "usd_foil", "eur", "avg_synergy"
-        ]
-    )
-    df.to_csv("./output/synergy-data.csv", index=False)
-    print(Fore.GREEN + "✅ Output saved to: scryfall_output.csv")
+        filtered_sorted.append((card, synergy_score))
 
-# ========== COMBINED EXECUTION ==========
+
+
+    rows = []
+    if filtered_sorted:
+        max_score = max(score for _, score in filtered_sorted)
+        temp_rows = []
+        for card, synergy_score in filtered_sorted:
+            normalized_score = math.ceil((synergy_score / max_score) * 10000)
+            scry = load_scryfall_data(card)
+            if not scry or "card_faces" in scry:
+                continue
+            if scry.get("color_identity") and not set(scry["color_identity"]).issubset(deck_colors):
+                continue
+
+            prices = scry.get("prices", {})
+            row = {
+                "usd": prices.get("usd", ""),
+                "name": scry["name"],
+                "synergy": normalized_score,
+                "type": extract_value(scry, "type_line"),
+                "mana_cost": extract_value(scry, "mana_cost"),
+                "colors": ",".join(scry.get("colors", [])),
+                "produced_mana": ",".join(scry.get("produced_mana", [])),
+                "power": get_power_tough(scry, "power"),
+                "tough": get_power_tough(scry, "toughness"),
+                "keywords": ",".join(scry.get("keywords", [])),
+                "rarity": extract_value(scry, "rarity"),
+                "text": extract_value(scry, "oracle_text"),
+                "rank": scry.get("edhrec_rank", ""),
+                "png": extract_value(scry.get("image_uris", {}), "png"),
+                "art": extract_value(scry.get("image_uris", {}), "art_crop"),
+                "url": extract_value(scry.get("purchase_uris", {}), "tcgplayer")
+            }
+            temp_rows.append(row)
+
+# Sort by synergy before writing to CSV
+    rows = sorted(temp_rows, key=lambda x: x["synergy"], reverse=True)
+
+
+
+    logging.info("📊 Writing synergy results to CSV...")
+    df = pd.DataFrame(rows)
+    os.makedirs("./output", exist_ok=True)
+    csv_path = "./output/top_synergy_cards.csv"
+    try:
+        df.to_csv(csv_path, index=False)
+    except PermissionError:
+        fallback_path = "./output/top_synergy_cards_1.csv"
+        print("⚠️ File in use, saving to:", fallback_path)
+        df.to_csv(fallback_path, index=False)
+    print(f"✅ Saved top synergy data to {csv_path}")
+
 if __name__ == "__main__":
     if len(sys.argv) != 2:
-        print("Usage: python full_pipeline.py <commander_list.txt>")
+        print("Usage: python deck_synergy_builder.py <deck_list.txt>")
         sys.exit(1)
-
-    edhrec_main(sys.argv[1])
-    combined_csv = combine_csvs("./edhrec-card-data")
-    if combined_csv:
-        enrich_with_scryfall(combined_csv)
+    generate_enriched_synergy_data(sys.argv[1])
